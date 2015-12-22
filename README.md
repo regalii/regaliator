@@ -14,10 +14,6 @@ And then execute:
 
     $ bundle
 
-Or install it yourself as:
-
-    $ gem install regalii_cli
-
 ## Configuration
 
 Add the following to config/initializers/regalii_cli.rb:
