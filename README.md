@@ -1,6 +1,6 @@
 # RegaliiCli
 
-Ruby wrapper for Regalii's API. The full API docs can be found at [http://www.regalii.com]
+Ruby wrapper for Regalii's API. The full API docs can be found at https://www.regalii.com/api/overview
 
 ## Installation
 
