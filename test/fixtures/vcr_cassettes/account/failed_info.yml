@@ -1,0 +1,54 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://api.regalii.dev/account
+    body:
+      encoding: UTF-8
+      string: 'null'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/vnd.regalii.v1.5+json
+      User-Agent:
+      - RegaliiCli gem v1.5.0
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 22 Dec 2015 17:31:45 GMT
+      Content-Md5:
+      - N6YlnMDB2uKZp4Zkid/wvQ==
+      Authorization:
+      - APIAuth api-key:6IOA/goL8M23dBS/CW4GcV51iIA=
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - aadcc614-1e69-412f-9518-bdf5065b6c25
+      X-Runtime:
+      - '0.016075'
+      Vary:
+      - Origin
+      Date:
+      - Tue, 22 Dec 2015 17:31:45 GMT
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"message":"Unauthorized"}'
+    http_version: 
+  recorded_at: Tue, 22 Dec 2015 17:31:45 GMT
+recorded_with: VCR 2.9.3

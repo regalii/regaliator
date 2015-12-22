@@ -1,0 +1,56 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://api.regalii.dev/rates
+    body:
+      encoding: UTF-8
+      string: 'null'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/vnd.regalii.v1.5+json
+      User-Agent:
+      - RegaliiCli gem v1.5.0
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 22 Dec 2015 17:34:24 GMT
+      Content-Md5:
+      - N6YlnMDB2uKZp4Zkid/wvQ==
+      Authorization:
+      - APIAuth api-key:+xL1yqNmwctsEMg/6HDjNlM/T0I=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"2f2c2ea84123a22b112875bfefd7759b"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 8f2b4132-1c48-42db-8b2e-9efc9d70e279
+      X-Runtime:
+      - '0.033646'
+      Vary:
+      - Origin
+      Date:
+      - Tue, 22 Dec 2015 17:34:24 GMT
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"GBP":0.6479,"CAD":1.3095,"MXN":16.6048,"RD":44.365,"NIO":26.9834,"GTQ":7.5274,"HNL":21.4265,"COP":3024.4074,"BRL":3.9135,"PEN":3.164,"BOB":6.7661,"PHP":45.8195,"INR":64.3778,"JMD":115.885,"NGN":195.1023}'
+    http_version: 
+  recorded_at: Tue, 22 Dec 2015 17:34:24 GMT
+recorded_with: VCR 2.9.3

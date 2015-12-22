@@ -1,0 +1,56 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://api.regalii.dev/bill/consult
+    body:
+      encoding: UTF-8
+      string: '{"biller_id":1,"account_number":"1234567"}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/vnd.regalii.v1.5+json
+      User-Agent:
+      - RegaliiCli gem v1.5.0
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 22 Dec 2015 18:44:34 GMT
+      Content-Md5:
+      - k1ZKOoBPxBDjW72F4RpY6Q==
+      Authorization:
+      - APIAuth api-key:A7kcPjOJdp7w2waN068AC0qI+SM=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"62155d3e385f494a55cc1c57673a03b0"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - c40711ec-bfcb-48a8-97f3-a8370f0f6c61
+      X-Runtime:
+      - '0.188219'
+      Vary:
+      - Origin
+      Date:
+      - Tue, 22 Dec 2015 18:44:38 GMT
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"account_number":"1234567","biller_id":1,"bill_amount":758.0,"bill_amount_currency":"RD","fx_rate":43.7105,"bill_amount_usd":17.34,"bill_amount_chain_currency":17.34,"payment_transaction_fee":3.0,"payment_total_usd":20.34,"payment_total_chain_currency":20.34,"invoice_number":null,"invoice_date":null,"name_on_account":null}'
+    http_version:
+  recorded_at: Tue, 22 Dec 2015 18:44:38 GMT
+recorded_with: VCR 2.9.3

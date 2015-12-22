@@ -1,0 +1,57 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://api.regalii.dev/subscriptions/consult
+    body:
+      encoding: UTF-8
+      string: '{"id":187}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/vnd.regalii.v1.5+json
+      User-Agent:
+      - RegaliiCli gem v1.5.0
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 22 Dec 2015 19:08:43 GMT
+      Content-Md5:
+      - 8sE1L+X9jGcQTnevFZDGhg==
+      Authorization:
+      - APIAuth api-key:yvHUTsCWKtie6zLrnMrjekx+7w4=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"325229d405f68b025034d76f7b1d778d"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - e6b3f6e2-0a60-445a-bd89-aea6f8f9ac28
+      X-Runtime:
+      - '0.018201'
+      Vary:
+      - Origin
+      Date:
+      - Tue, 22 Dec 2015 19:08:43 GMT
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"id":187,"login":"testlogin","balance":36.98,"due_date":"2015-12-22","account_number":"38517298","name_on_account":"Ms.
+        Sarina Weber","callback_url":null,"is_running":false,"error":null,"has_error":false,"created_at":"2015-12-22T19:06:39.000Z","updated_at":"2015-12-22T19:06:41.000Z"}'
+    http_version:
+  recorded_at: Tue, 22 Dec 2015 19:08:43 GMT
+recorded_with: VCR 2.9.3

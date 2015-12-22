@@ -1,0 +1,70 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://api.regalii.dev/bill/pay
+    body:
+      encoding: UTF-8
+      string: '{"biller_id":1,"account_number":"1234567","amount":758.0,"currency":"RD"}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/vnd.regalii.v1.5+json
+      User-Agent:
+      - RegaliiCli gem v1.5.0
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 22 Dec 2015 18:48:02 GMT
+      Content-Md5:
+      - K0pYJpWgEHIPYyerjNivGA==
+      Authorization:
+      - APIAuth api-key:79N/jfVs3nJfwG5jl1gcUBhe1t0=
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"75e178a139c2eca22ffbf070fd82f922"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 7f487410-213b-4639-b3ed-cb06dc4da534
+      X-Runtime:
+      - '0.125250'
+      Vary:
+      - Origin
+      Date:
+      - Tue, 22 Dec 2015 18:48:02 GMT
+      Connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6MTgsImV4dGVybmFsX2lkIjpudWxsLCJiaWxsZXJfaWQiOjEsImFj
+        Y291bnRfbnVtYmVyIjoiMTIzNDU2NyIsImJpbGxfYW1vdW50Ijo3NTguMCwi
+        YmlsbF9hbW91bnRfY3VycmVuY3kiOiJSRCIsImZ4X3JhdGUiOjQzLjcxMDUs
+        ImJpbGxfYW1vdW50X3VzZCI6MTcuMzQsImJpbGxfYW1vdW50X2NoYWluX2N1
+        cnJlbmN5IjoxNy4zNCwicGF5bWVudF90cmFuc2FjdGlvbl9mZWUiOjMuMCwi
+        cGF5bWVudF90b3RhbF91c2QiOjIwLjM0LCJwYXltZW50X3RvdGFsX2NoYWlu
+        X2N1cnJlbmN5IjoyMC4zNCwiY2hhaW5fZWFybmVkIjowLjAsImNoYWluX3Bh
+        aWQiOjIwLjM0LCJzdGFydGluZ19iYWxhbmNlIjotOTMuMiwiZW5kaW5nX2Jh
+        bGFuY2UiOi0xMTMuNTQsImhvdXJzX3RvX2Z1bGZpbGwiOjAsImRpc2NvdW50
+        IjowLjAsInNtc190ZXh0IjoiVHUgcGFnbyBkZSBFZGVzdXIgcG9yICQ3NTgu
+        MDBSRCBzZSByZWFsaXpvIGNvbiDDqXhpdG8hIEFob3JhIHRhbWJpw6luIHB1
+        ZWRlcyBwYWdhciB0dSBmYWN0dXJhIGRlIEVkZW5vcnRlLCBWaXZhIHkgQ2xh
+        cm8gZW4gdHUgdGllbmRhIFJlZ2FsaWkuIiwiY3JlYXRlZF9hdCI6IjIwMTUt
+        MTItMjJUMTg6NDg6MDIuMDAwWiJ9
+    http_version:
+  recorded_at: Tue, 22 Dec 2015 18:48:02 GMT
+recorded_with: VCR 2.9.3

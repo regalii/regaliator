@@ -1,0 +1,74 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://api.regalii.dev/transactions
+    body:
+      encoding: UTF-8
+      string: '{"q":{"id_eq":1}}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/vnd.regalii.v1.5+json
+      User-Agent:
+      - RegaliiCli gem v1.5.0
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 22 Dec 2015 18:24:04 GMT
+      Content-Md5:
+      - tRG8QZBLrK1yLTq4+VrqqA==
+      Authorization:
+      - APIAuth api-key:wLTFxtu4SMUMgSpWjxmI9FETZXo=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Pagination:
+      - '{"total_entries":1,"total_pages":1,"previous_page":null,"current_page":1,"next_page":null}'
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"71fec7f88093b7bb69998f633ba1ad40"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - b236eb93-2cc0-43a4-96f2-c25780304114
+      X-Runtime:
+      - '0.178088'
+      Vary:
+      - Origin
+      Date:
+      - Tue, 22 Dec 2015 18:24:07 GMT
+      Connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJ0cmFuc2FjdGlvbnMiOlt7ImlkIjoxLCJleHRlcm5hbF9pZCI6IjEtMTU5
+        MS0yMjIyMjIyMjMzLTIwMTUwOTMwMjEyOCIsImJpbGxlcl9pZCI6MTU5MSwi
+        YWNjb3VudF9udW1iZXIiOiIyMjIyMjIyMjMzIiwiYmlsbF9hbW91bnQiOjIu
+        MCwiYmlsbF9hbW91bnRfY3VycmVuY3kiOiJVU0QiLCJmeF9yYXRlIjoxNi42
+        MDQ4LCJiaWxsX2Ftb3VudF91c2QiOjIuMCwiYmlsbF9hbW91bnRfY2hhaW5f
+        Y3VycmVuY3kiOjIuMCwicGF5bWVudF90cmFuc2FjdGlvbl9mZWUiOjAuMCwi
+        cGF5bWVudF90b3RhbF91c2QiOjIuMCwicGF5bWVudF90b3RhbF9jaGFpbl9j
+        dXJyZW5jeSI6Mi4wLCJjaGFpbl9lYXJuZWQiOjAuNSwiY2hhaW5fcGFpZCI6
+        MS41LCJzdGFydGluZ19iYWxhbmNlIjotNjAyLjEsImVuZGluZ19iYWxhbmNl
+        IjotNjAzLjYsImhvdXJzX3RvX2Z1bGZpbGwiOjAsImRpc2NvdW50IjowLjAs
+        InNtc190ZXh0IjoiVHUgcGFnbyBkZSBbTWV4aWNvXSBUZWxjZWwgcG9yICQy
+        MC4wME1YTiBzZSByZWFsaXpvIGNvbiDDqXhpdG8hIEFob3JhIHRhbWJpw6lu
+        IHB1ZWRlcyBwYWdhciB0dSBmYWN0dXJhIGRlIENGRSwgU2t5IHkgSW5mb25h
+        dml0IGVuIHR1IHRpZW5kYSBSZWdhbGlpLiIsImNyZWF0ZWRfYXQiOiIyMDE1
+        LTA5LTMwVDIxOjI4OjA4LjAwMFoiLCJwYXltZW50X3N0YXR1cyI6InNlbnQi
+        fV19
+    http_version: 
+  recorded_at: Tue, 22 Dec 2015 18:24:07 GMT
+recorded_with: VCR 2.9.3
