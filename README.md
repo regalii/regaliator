@@ -7,7 +7,7 @@ Ruby wrapper for Regalii's API. The full API docs can be found at [http://www.re
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'regalii_cli', '~> 1.5.0'
+gem 'regalii_cli', github: 'regalii/regalii-gem'
 ```
 
 And then execute:
