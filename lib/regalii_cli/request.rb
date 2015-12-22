@@ -12,23 +12,11 @@ module RegaliiCli
       @uri            = build_uri
       @http           = build_http
       @http_request   = build_request
-    end
 
-    def apply_headers
-      {
-        'User-Agent'    => "RegaliiCli gem v#{RegaliiCli::VERSION}",
-        'Accept'        => "application/vnd.regalii.v#{config.version}+json",
-        'Content-Type'  => CONTENT_TYPE,
-        'Date'          => timestamp,
-        'Content-MD5'   => content_md5,
-        'Authorization' => authorization
-      }.each do |k,v|
-        http_request[k] = v
-      end
+      apply_headers
     end
 
     def post
-      apply_headers
       response = http.request(http_request)
 
       RegaliiCli::Response.new(response)
@@ -63,12 +51,28 @@ module RegaliiCli
       request
     end
 
+    def apply_headers
+      {
+        'User-Agent'    => "RegaliiCli gem v#{RegaliiCli::VERSION}",
+        'Accept'        => "application/vnd.regalii.v#{config.version}+json",
+        'Content-Type'  => CONTENT_TYPE,
+        'Date'          => timestamp,
+        'Content-MD5'   => content_md5,
+        'Authorization' => authorization
+      }.each do |k,v|
+        http_request[k] = v
+      end
+    end
+
     def authorization
-      canonical_string = [CONTENT_TYPE, content_md5, http_request.path, timestamp].join(',')
       digest = OpenSSL::Digest.new('sha1')
       auth = Base64.strict_encode64(OpenSSL::HMAC.digest(digest, config.secret_key, canonical_string))
 
       "APIAuth #{config.api_key}:#{auth}"
+    end
+
+    def canonical_string
+      canonical_string = [CONTENT_TYPE, content_md5, http_request.path, timestamp].join(',')
     end
 
     def content_md5
