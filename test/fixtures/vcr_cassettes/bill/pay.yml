@@ -5,22 +5,22 @@ http_interactions:
     uri: http://api.regalii.dev/bill/pay
     body:
       encoding: UTF-8
-      string: '{"biller_id":1,"account_number":"1234567","amount":758.0,"currency":"RD"}'
+      string: '{"id":229,"amount":758.0,"currency":"RD","user_id":3101}'
     headers:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - application/vnd.regalii.v1.5+json
+      - application/vnd.regalii.v2.0+json
       User-Agent:
-      - RegaliiCli gem v1.5.0
+      - RegaliiCli gem v2.0.0
       Content-Type:
       - application/json
       Date:
-      - Tue, 22 Dec 2015 18:48:02 GMT
+      - Thu, 14 Jan 2016 22:23:06 GMT
       Content-Md5:
-      - K0pYJpWgEHIPYyerjNivGA==
+      - TTs06vATU+524bRgY1/V+w==
       Authorization:
-      - APIAuth api-key:79N/jfVs3nJfwG5jl1gcUBhe1t0=
+      - APIAuth api-key:C4/HoTZ/86P9SFUBmavBb6x9BI4=
   response:
     status:
       code: 201
@@ -35,36 +35,24 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - '"75e178a139c2eca22ffbf070fd82f922"'
+      - '"28211ccb27107ca4518c415bf72e1ac1"'
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 7f487410-213b-4639-b3ed-cb06dc4da534
+      - 5796c160-3ee8-46da-acb6-ca66fced9da9
       X-Runtime:
-      - '0.125250'
+      - '0.364466'
       Vary:
       - Origin
       Date:
-      - Tue, 22 Dec 2015 18:48:02 GMT
+      - Thu, 14 Jan 2016 22:23:10 GMT
       Connection:
       - close
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        eyJpZCI6MTgsImV4dGVybmFsX2lkIjpudWxsLCJiaWxsZXJfaWQiOjEsImFj
-        Y291bnRfbnVtYmVyIjoiMTIzNDU2NyIsImJpbGxfYW1vdW50Ijo3NTguMCwi
-        YmlsbF9hbW91bnRfY3VycmVuY3kiOiJSRCIsImZ4X3JhdGUiOjQzLjcxMDUs
-        ImJpbGxfYW1vdW50X3VzZCI6MTcuMzQsImJpbGxfYW1vdW50X2NoYWluX2N1
-        cnJlbmN5IjoxNy4zNCwicGF5bWVudF90cmFuc2FjdGlvbl9mZWUiOjMuMCwi
-        cGF5bWVudF90b3RhbF91c2QiOjIwLjM0LCJwYXltZW50X3RvdGFsX2NoYWlu
-        X2N1cnJlbmN5IjoyMC4zNCwiY2hhaW5fZWFybmVkIjowLjAsImNoYWluX3Bh
-        aWQiOjIwLjM0LCJzdGFydGluZ19iYWxhbmNlIjotOTMuMiwiZW5kaW5nX2Jh
-        bGFuY2UiOi0xMTMuNTQsImhvdXJzX3RvX2Z1bGZpbGwiOjAsImRpc2NvdW50
-        IjowLjAsInNtc190ZXh0IjoiVHUgcGFnbyBkZSBFZGVzdXIgcG9yICQ3NTgu
-        MDBSRCBzZSByZWFsaXpvIGNvbiDDqXhpdG8hIEFob3JhIHRhbWJpw6luIHB1
-        ZWRlcyBwYWdhciB0dSBmYWN0dXJhIGRlIEVkZW5vcnRlLCBWaXZhIHkgQ2xh
-        cm8gZW4gdHUgdGllbmRhIFJlZ2FsaWkuIiwiY3JlYXRlZF9hdCI6IjIwMTUt
-        MTItMjJUMTg6NDg6MDIuMDAwWiJ9
-    http_version:
-  recorded_at: Tue, 22 Dec 2015 18:48:02 GMT
+      encoding: UTF-8
+      string: '{"id":20,"external_id":null,"biller_id":2,"account_number":"8081969","bill_amount":758.0,"bill_amount_currency":"RD","fx_rate":41.8686,"bill_amount_usd":18.1,"bill_amount_chain_currency":18.1,"payment_transaction_fee":3.0,"payment_total_usd":21.1,"payment_total_chain_currency":21.1,"chain_earned":0.0,"chain_paid":21.1,"starting_balance":-134.64,"ending_balance":-155.74,"hours_to_fulfill":0,"discount":0.0,"sms_text":"Tu
+        pago de Edenorte por $758.00RD se realizo con éxito! Ahora también puedes
+        pagar tu factura de Edesur, Viva y Claro en tu tienda Regalii.","created_at":"2016-01-14T22:23:10Z","payment_status":"sent"}'
+    http_version: 
+  recorded_at: Thu, 14 Jan 2016 22:23:10 GMT
 recorded_with: VCR 2.9.3

@@ -1,4 +1,4 @@
 module RegaliiCli
-  VERSION     = "1.5.0"
-  API_VERSION = "1.5"
+  VERSION     = "2.0.0"
+  API_VERSION = "2.0"
 end

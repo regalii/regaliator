@@ -9,7 +9,6 @@ require "regalii_cli/endpoint/account"
 require "regalii_cli/endpoint/bill"
 require "regalii_cli/endpoint/biller"
 require "regalii_cli/endpoint/rate"
-require "regalii_cli/endpoint/subscription"
 require "regalii_cli/endpoint/transaction"
 
 module RegaliiCli

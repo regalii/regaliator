@@ -1,0 +1,56 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://api.regalii.dev/bill/refresh
+    body:
+      encoding: UTF-8
+      string: '{"id":229}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/vnd.regalii.v2.0+json
+      User-Agent:
+      - RegaliiCli gem v2.0.0
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 14 Jan 2016 21:43:38 GMT
+      Content-Md5:
+      - hswnQzsMk/KUKlNUDHom0Q==
+      Authorization:
+      - APIAuth api-key:Xkg0xvZTvQvdQdIIM36uRF1b0vY=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"0a7b1c5d5bafe6dc56a85a11c61b0c01"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 3c25c7a6-42aa-4578-a1ca-d168bd39e8aa
+      X-Runtime:
+      - '0.026854'
+      Vary:
+      - Origin
+      Date:
+      - Thu, 14 Jan 2016 21:43:38 GMT
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"id":229,"biller_id":2,"account_number":"8081969","name_on_account":null,"due_date":null,"balance":24.0,"balance_currency":"RD","balance_in_chain_currency":0.56,"balance_updated_at":"2016-01-14T21:43:38Z","created_at":"2016-01-14T21:40:06Z","last_paid_at":null,"is_running":false,"error_with_account":false,"error_message":null,"secret_question":null,"secret_answer":null}'
+    http_version: 
+  recorded_at: Thu, 14 Jan 2016 21:43:38 GMT
+recorded_with: VCR 2.9.3
