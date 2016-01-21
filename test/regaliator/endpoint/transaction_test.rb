@@ -1,8 +1,8 @@
 require 'test_helper'
 
-class RegaliiCli::TransactionTest < Test::Unit::TestCase
+class Regaliator::TransactionTest < Test::Unit::TestCase
   def setup
-    RegaliiCli.configure do |config|
+    Regaliator.configure do |config|
       config.api_key    = 'api-key'
       config.secret_key = 'secret-key'
       config.host       = 'api.regalii.dev'
@@ -12,7 +12,7 @@ class RegaliiCli::TransactionTest < Test::Unit::TestCase
 
   def test_list
     VCR.use_cassette('transaction/list') do
-      response = RegaliiCli::Transaction.list
+      response = Regaliator::Transaction.list
 
       assert response.success?
 
@@ -50,7 +50,7 @@ class RegaliiCli::TransactionTest < Test::Unit::TestCase
 
   def test_with_search
     VCR.use_cassette('transaction/search') do
-      response = RegaliiCli::Transaction.list(q: { id_eq: 1})
+      response = Regaliator::Transaction.list(q: { id_eq: 1})
 
       assert response.success?
 

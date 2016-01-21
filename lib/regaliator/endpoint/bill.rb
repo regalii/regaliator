@@ -1,4 +1,4 @@
-module RegaliiCli
+module Regaliator
   class Bill < Endpoint
     def self.create(*args)
       prepare_request('bill/create', args.first).post

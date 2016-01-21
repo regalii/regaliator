@@ -1,4 +1,4 @@
-module RegaliiCli
+module Regaliator
   class Response
     attr_reader :success
     attr_reader :data

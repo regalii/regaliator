@@ -1,8 +1,8 @@
 require 'test_helper'
 
-class RegaliiCli::BillTest < Test::Unit::TestCase
+class Regaliator::BillTest < Test::Unit::TestCase
   def setup
-    RegaliiCli.configure do |config|
+    Regaliator.configure do |config|
       config.api_key    = 'api-key'
       config.secret_key = 'secret-key'
       config.host       = 'api.regalii.dev'
@@ -12,7 +12,7 @@ class RegaliiCli::BillTest < Test::Unit::TestCase
 
   def test_create
     VCR.use_cassette('bill/create') do
-      response = RegaliiCli::Bill.create(biller_id: 2, account_number: '8081969')
+      response = Regaliator::Bill.create(biller_id: 2, account_number: '8081969')
 
       assert response.success?
 
@@ -41,7 +41,7 @@ class RegaliiCli::BillTest < Test::Unit::TestCase
 
   def test_update
     VCR.use_cassette('bill/update') do
-      response = RegaliiCli::Bill.update(id: 229, name_on_account: 'Test name')
+      response = Regaliator::Bill.update(id: 229, name_on_account: 'Test name')
 
       assert response.success?
 
@@ -70,7 +70,7 @@ class RegaliiCli::BillTest < Test::Unit::TestCase
 
   def test_show
     VCR.use_cassette('bill/show') do
-      response = RegaliiCli::Bill.show(id: 229)
+      response = Regaliator::Bill.show(id: 229)
 
       assert response.success?
 
@@ -99,7 +99,7 @@ class RegaliiCli::BillTest < Test::Unit::TestCase
 
   def test_refresh
     VCR.use_cassette('bill/refresh') do
-      response = RegaliiCli::Bill.refresh(id: 229)
+      response = Regaliator::Bill.refresh(id: 229)
 
       assert response.success?
 
@@ -128,7 +128,7 @@ class RegaliiCli::BillTest < Test::Unit::TestCase
 
   def test_pay
     VCR.use_cassette('bill/pay') do
-      response = RegaliiCli::Bill.pay(id: 229, amount: 758.0, currency: 'RD', user_id: 3101)
+      response = Regaliator::Bill.pay(id: 229, amount: 758.0, currency: 'RD', user_id: 3101)
 
       assert response.success?
 

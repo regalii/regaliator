@@ -12,7 +12,7 @@ http_interactions:
       Accept:
       - application/vnd.regalii.v2.0+json
       User-Agent:
-      - RegaliiCli gem v2.0.0
+      - Regaliator gem v2.0.0
       Content-Type:
       - application/json
       Date:

@@ -1,4 +1,4 @@
-module RegaliiCli
+module Regaliator
   class Rate < Endpoint
     def self.list(*args)
       prepare_request('rates', args.first).post

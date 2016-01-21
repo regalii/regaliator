@@ -1,4 +1,4 @@
-module RegaliiCli
+module Regaliator
   class Account < Endpoint
     def self.info(*args)
       prepare_request('account', args.first).post

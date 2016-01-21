@@ -1,7 +1,7 @@
-module RegaliiCli
+module Regaliator
   class Endpoint
     def self.prepare_request(endpoint, params = {})
-      RegaliiCli::Request.new(endpoint, params)
+      Regaliator::Request.new(endpoint, params)
     end
   end
 end
