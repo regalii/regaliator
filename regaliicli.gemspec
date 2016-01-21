@@ -1,10 +1,10 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'regalii_cli/version'
+require 'regaliicli/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "regalii_cli"
+  spec.name          = "regaliicli"
   spec.version       = RegaliiCli::VERSION
   spec.authors       = ["Hesham El-Nahhas"]
   spec.email         = ["hesham@regalii.com"]

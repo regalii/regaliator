@@ -1,5 +1,5 @@
 require 'test/unit'
-require 'regalii_cli'
+require 'regaliicli'
 require 'vcr'
 
 VCR.configure do |c|
