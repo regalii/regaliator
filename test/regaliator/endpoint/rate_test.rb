@@ -1,8 +1,8 @@
 require 'test_helper'
 
-class RegaliiCli::RateTest < Test::Unit::TestCase
+class Regaliator::RateTest < Test::Unit::TestCase
   def setup
-    RegaliiCli.configure do |config|
+    Regaliator.configure do |config|
       config.api_key    = 'api-key'
       config.secret_key = 'secret-key'
       config.host       = 'api.regalii.dev'
@@ -12,7 +12,7 @@ class RegaliiCli::RateTest < Test::Unit::TestCase
 
   def test_list
     VCR.use_cassette('rate/list') do
-      response = RegaliiCli::Rate.list
+      response = Regaliator::Rate.list
 
       assert response.success?
 
@@ -40,7 +40,7 @@ class RegaliiCli::RateTest < Test::Unit::TestCase
 
   def test_history
     VCR.use_cassette('rate/history') do
-      response = RegaliiCli::Rate.history
+      response = Regaliator::Rate.history
 
       assert response.success?
 

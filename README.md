@@ -1,4 +1,4 @@
-# RegaliiCli
+# Regaliator
 
 Ruby wrapper for Regalii's API. The full API docs can be found at https://www.regalii.com/api/overview
 
@@ -7,7 +7,7 @@ Ruby wrapper for Regalii's API. The full API docs can be found at https://www.re
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'regalii_cli', github: 'regalii/regalii-gem'
+gem 'regaliator', github: 'regalii/regaliator'
 ```
 
 And then execute:
@@ -16,10 +16,10 @@ And then execute:
 
 ## Configuration
 
-Add the following to config/initializers/regalii_cli.rb:
+Add the following to config/initializers/regaliator.rb:
 
 ```ruby
-  RegaliiCli.configuration do |config|
+  Regaliator.configuration do |config|
     # Authentication settings
     config.api_key      = 'your-api-key'
     config.secret_key   = 'your-secret-key'
@@ -43,7 +43,7 @@ Add the following to config/initializers/regalii_cli.rb:
 **Success:**
 
 ```ruby
-> response = RegaliiCli::Bill.consult(biller_id: 1, account_number: '12345')
+> response = Regaliator::Bill.consult(biller_id: 1, account_number: '12345')
 > response.success?
 => true
 > response.data
@@ -51,7 +51,7 @@ Add the following to config/initializers/regalii_cli.rb:
 ```
 
 ```ruby
-> response = RegaliiCli::Bill.pay(biller_id: 1, account_number: '12345', amount: 13.0, currency: 'MXN')
+> response = Regaliator::Bill.pay(biller_id: 1, account_number: '12345', amount: 13.0, currency: 'MXN')
 > response.success?
 => true
 > response.data
@@ -61,7 +61,7 @@ Add the following to config/initializers/regalii_cli.rb:
 **Failure:**
 
 ```ruby
-> response = RegaliiCli::Bill.pay(biller_id: 1, account_number: '12345', amount: 0.0, currency: 'MXN')
+> response = Regaliator::Bill.pay(biller_id: 1, account_number: '12345', amount: 0.0, currency: 'MXN')
 > response.success?
 => false
 > response.data

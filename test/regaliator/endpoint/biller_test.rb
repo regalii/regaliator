@@ -1,8 +1,8 @@
 require 'test_helper'
 
-class RegaliiCli::BillerTest < Test::Unit::TestCase
+class Regaliator::BillerTest < Test::Unit::TestCase
   def setup
-    RegaliiCli.configure do |config|
+    Regaliator.configure do |config|
       config.api_key    = 'api-key'
       config.secret_key = 'secret-key'
       config.host       = 'api.regalii.dev'
@@ -12,7 +12,7 @@ class RegaliiCli::BillerTest < Test::Unit::TestCase
 
   def test_list
     VCR.use_cassette('biller/list') do
-      response = RegaliiCli::Biller.list
+      response = Regaliator::Biller.list
 
       assert response.success?
 

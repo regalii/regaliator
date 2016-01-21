@@ -1,11 +1,11 @@
-module RegaliiCli
+module Regaliator
   class Request
     CONTENT_TYPE = 'application/json'
 
     attr_reader :config, :http, :http_request, :uri, :endpoint, :params, :timestamp
 
     def initialize(endpoint, params = {})
-      @config         = RegaliiCli.configuration
+      @config         = Regaliator.configuration
       @timestamp      = Time.now.utc.httpdate.to_s
       @endpoint       = endpoint
       @params         = params
@@ -19,7 +19,7 @@ module RegaliiCli
     def post
       response = http.request(http_request)
 
-      RegaliiCli::Response.new(response)
+      Regaliator::Response.new(response)
     end
 
     private
@@ -53,7 +53,7 @@ module RegaliiCli
 
     def apply_headers
       {
-        'User-Agent'    => "RegaliiCli gem v#{RegaliiCli::VERSION}",
+        'User-Agent'    => "Regaliator gem v#{Regaliator::VERSION}",
         'Accept'        => "application/vnd.regalii.v#{config.version}+json",
         'Content-Type'  => CONTENT_TYPE,
         'Date'          => timestamp,

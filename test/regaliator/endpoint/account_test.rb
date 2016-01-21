@@ -1,8 +1,8 @@
 require 'test_helper'
 
-class RegaliiCli::AccountTest < Test::Unit::TestCase
+class Regaliator::AccountTest < Test::Unit::TestCase
   def test_successful_info
-    RegaliiCli.configure do |config|
+    Regaliator.configure do |config|
       config.api_key    = 'api-key'
       config.secret_key = 'secret-key'
       config.host       = 'api.regalii.dev'
@@ -10,7 +10,7 @@ class RegaliiCli::AccountTest < Test::Unit::TestCase
     end
 
     VCR.use_cassette('account/successful_info') do
-      response = RegaliiCli::Account.info
+      response = Regaliator::Account.info
 
       assert response.success?
 
@@ -26,7 +26,7 @@ class RegaliiCli::AccountTest < Test::Unit::TestCase
   end
 
   def test_failed_info
-    RegaliiCli.configure do |config|
+    Regaliator.configure do |config|
       config.api_key    = 'api-key'
       config.secret_key = 'bogus'
       config.host       = 'api.regalii.dev'
@@ -34,7 +34,7 @@ class RegaliiCli::AccountTest < Test::Unit::TestCase
     end
 
     VCR.use_cassette('account/failed_info') do
-      response = RegaliiCli::Account.info
+      response = Regaliator::Account.info
 
       assert !response.success?
 

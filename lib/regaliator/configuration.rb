@@ -1,4 +1,4 @@
-module RegaliiCli
+module Regaliator
   class Configuration
     attr_accessor :api_key, :secret_key, :host, :open_timeout, :read_timeout, :use_ssl
     attr_accessor :proxy_host, :proxy_port, :proxy_user, :proxy_pass
@@ -8,7 +8,7 @@ module RegaliiCli
       @api_key      = nil
       @secret_key   = nil
       @host         = nil
-      @version      = RegaliiCli::API_VERSION
+      @version      = Regaliator::API_VERSION
       @open_timeout = 10
       @read_timeout = 60
       @use_ssl      = true
