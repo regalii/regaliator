@@ -19,7 +19,7 @@ And then execute:
 Add the following to config/initializers/regaliator.rb:
 
 ```ruby
-  Regaliator.configuration do |config|
+  Regaliator.configure do |config|
     # Authentication settings
     config.api_key      = 'your-api-key'
     config.secret_key   = 'your-secret-key'
@@ -66,4 +66,14 @@ Add the following to config/initializers/regaliator.rb:
 => false
 > response.data
 => {"code" => "R3", "message" => "Invalid Payment Amount"}
+```
+
+## Examples
+
+The following examples will show how to use the Regaliator gem to connect to the different Regalii API endpoints.
+
+### Billers List
+https://www.regalii.com/api/billers
+```ruby
+response = Regaliator::Biller.list
 ```
