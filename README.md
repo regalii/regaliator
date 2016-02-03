@@ -1,6 +1,6 @@
 # Regaliator
 
-Ruby wrapper for Regalii's API. The full API docs can be found at https://www.regalii.com/api/overview
+Ruby wrapper for Regalii's API. The full API docs can be found at: https://www.regalii.com/api/overview
 
 ## Installation
 
