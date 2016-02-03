@@ -25,7 +25,7 @@ Add the following to config/initializers/regaliator.rb:
     config.secret_key   = 'your-secret-key'
 
     # API host settings
-    config.host         = 'api.casiegalii.com'
+    config.host         = 'api.casiregalii.com'
     config.open_timeout = 5
     config.read_timeout = 10
     config.use_ssl      = true
