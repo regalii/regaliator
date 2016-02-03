@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class Regaliator::ConfigurationTest < Test::Unit::TestCase
+class Regaliator::ConfigurationTest < Minitest::Test
   def teardown
     Regaliator.configuration = nil
   end
@@ -50,7 +50,7 @@ class Regaliator::ConfigurationTest < Test::Unit::TestCase
   end
 
   def test_cannot_override_config_version
-    assert_raise NoMethodError do
+    assert_raises NoMethodError do
       Regaliator.configure do |config|
         config.version = '2.0'
       end

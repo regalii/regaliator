@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class RegaliatorTest < Test::Unit::TestCase
+class RegaliatorTest < Minitest::Test
   def teardown
     Regaliator.configuration = nil
   end

@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class Regaliator::AccountTest < Test::Unit::TestCase
+class Regaliator::AccountTest < Minitest::Test
   def test_successful_info
     Regaliator.configure do |config|
       config.api_key    = 'api-key'
