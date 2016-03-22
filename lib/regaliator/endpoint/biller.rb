@@ -1,7 +1,7 @@
 module Regaliator
   class Biller < Endpoint
     def self.list(*args)
-      prepare_request('billers', args.first).post
+      Regaliator::Request.new('billers', args.first).post
     end
   end
 end

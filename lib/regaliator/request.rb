@@ -11,12 +11,31 @@ module Regaliator
       @params         = params
       @uri            = build_uri
       @http           = build_http
-      @http_request   = build_request
-
-      apply_headers
     end
 
     def post
+      @http_request = Net::HTTP::Post.new(uri.request_uri)
+      @http_request.body = params.to_json
+
+      send
+    end
+
+    def get
+      @http_request = Net::HTTP::Get.new(uri.request_uri)
+
+      send
+    end
+
+    def patch
+      @http_request = Net::HTTP::Patch.new(uri.request_uri)
+      @http_request.body = params.to_json
+
+      send
+    end
+
+    def send
+      apply_headers
+
       response = http.request(http_request)
 
       Regaliator::Response.new(response)
@@ -43,12 +62,6 @@ module Regaliator
       http.ssl_version  = :TLSv1
 
       http
-    end
-
-    def build_request
-      request = Net::HTTP::Post.new(uri.request_uri)
-      request.body = params.to_json
-      request
     end
 
     def apply_headers
