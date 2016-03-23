@@ -21,6 +21,7 @@ module Regaliator
     end
 
     def get
+      uri.query = URI.encode_www_form(params) if !params.empty?
       @http_request = Net::HTTP::Get.new(uri.request_uri)
 
       send
@@ -45,7 +46,7 @@ module Regaliator
 
     def build_uri
       protocol = config.secure? ? 'https' : 'http'
-      url = "#{protocol}://#{config.host}/#{endpoint}"
+      url = ["#{protocol}://#{config.host}", endpoint].join
       uri = URI.parse(url)
       uri
     end
@@ -85,11 +86,11 @@ module Regaliator
     end
 
     def canonical_string
-      canonical_string = [CONTENT_TYPE, content_md5, http_request.path, timestamp].join(',')
+      [CONTENT_TYPE, content_md5, http_request.path, timestamp].join(',')
     end
 
     def content_md5
-      Digest::MD5.base64digest(http_request.body)
+      Digest::MD5.base64digest(http_request.body) if http_request.body
     end
   end
 end

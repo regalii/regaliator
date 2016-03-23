@@ -1,11 +1,11 @@
 module Regaliator
   class Rate < Endpoint
-    def self.list(*args)
-      Regaliator::Request.new('rates', args.first).post
+    def self.list
+      Regaliator::Request.new('/rates').get
     end
 
-    def self.history(*args)
-      Regaliator::Request.new('rates/history', args.first).post
+    def self.history
+      Regaliator::Request.new('/rates/history').get
     end
   end
 end

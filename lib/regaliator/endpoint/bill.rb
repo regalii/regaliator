@@ -1,23 +1,23 @@
 module Regaliator
   class Bill < Endpoint
-    def self.create(*args)
-      Regaliator::Request.new('bill/create', args.first).post
+    def self.create(params = {})
+      Regaliator::Request.new('/bills', params).post
     end
 
-    def self.show(*args)
-      Regaliator::Request.new('bill/show', args.first).post
+    def self.show(id)
+      Regaliator::Request.new("/bills/#{id}").get
     end
 
-    def self.update(*args)
-      Regaliator::Request.new('bill/update', args.first).post
+    def self.update(id, params = {})
+      Regaliator::Request.new("/bills/#{id}", params).patch
     end
 
-    def self.refresh(*args)
-      Regaliator::Request.new('bill/refresh', args.first).post
+    def self.refresh(id)
+      Regaliator::Request.new("/bills/#{id}/refresh").post
     end
 
-    def self.pay(*args)
-      Regaliator::Request.new('bill/pay', args.first).post
+    def self.pay(id, params = {})
+      Regaliator::Request.new("/bills/#{id}/pay", params).post
     end
   end
 end

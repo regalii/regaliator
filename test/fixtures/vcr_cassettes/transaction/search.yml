@@ -1,26 +1,24 @@
 ---
 http_interactions:
 - request:
-    method: post
-    uri: http://api.regalii.dev/transactions
+    method: get
+    uri: http://api.regalii.dev/transactions?q%5Bid_eq%5D=1
     body:
-      encoding: UTF-8
-      string: '{"q":{"id_eq":1}}'
+      encoding: US-ASCII
+      string: ''
     headers:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - application/vnd.regalii.v1.5+json
+      - application/vnd.regalii.v3.0+json
       User-Agent:
-      - Regaliator gem v1.5.0
+      - Regaliator gem v3.0.0
       Content-Type:
       - application/json
       Date:
-      - Tue, 22 Dec 2015 18:24:04 GMT
-      Content-Md5:
-      - tRG8QZBLrK1yLTq4+VrqqA==
+      - Tue, 22 Mar 2016 20:52:13 GMT
       Authorization:
-      - APIAuth api-key:wLTFxtu4SMUMgSpWjxmI9FETZXo=
+      - APIAuth api-key:WL6G79M838Zoo5LH+jpJsHJ3S04=
   response:
     status:
       code: 200
@@ -37,38 +35,22 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - '"71fec7f88093b7bb69998f633ba1ad40"'
+      - '"0dd2c5083f4e41a311a14206e6a70f28"'
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - b236eb93-2cc0-43a4-96f2-c25780304114
+      - 38c0073e-4106-43a4-8705-32eb1483de24
       X-Runtime:
-      - '0.178088'
+      - '0.213259'
       Vary:
       - Origin
       Date:
-      - Tue, 22 Dec 2015 18:24:07 GMT
+      - Tue, 22 Mar 2016 20:52:16 GMT
       Connection:
       - close
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        eyJ0cmFuc2FjdGlvbnMiOlt7ImlkIjoxLCJleHRlcm5hbF9pZCI6IjEtMTU5
-        MS0yMjIyMjIyMjMzLTIwMTUwOTMwMjEyOCIsImJpbGxlcl9pZCI6MTU5MSwi
-        YWNjb3VudF9udW1iZXIiOiIyMjIyMjIyMjMzIiwiYmlsbF9hbW91bnQiOjIu
-        MCwiYmlsbF9hbW91bnRfY3VycmVuY3kiOiJVU0QiLCJmeF9yYXRlIjoxNi42
-        MDQ4LCJiaWxsX2Ftb3VudF91c2QiOjIuMCwiYmlsbF9hbW91bnRfY2hhaW5f
-        Y3VycmVuY3kiOjIuMCwicGF5bWVudF90cmFuc2FjdGlvbl9mZWUiOjAuMCwi
-        cGF5bWVudF90b3RhbF91c2QiOjIuMCwicGF5bWVudF90b3RhbF9jaGFpbl9j
-        dXJyZW5jeSI6Mi4wLCJjaGFpbl9lYXJuZWQiOjAuNSwiY2hhaW5fcGFpZCI6
-        MS41LCJzdGFydGluZ19iYWxhbmNlIjotNjAyLjEsImVuZGluZ19iYWxhbmNl
-        IjotNjAzLjYsImhvdXJzX3RvX2Z1bGZpbGwiOjAsImRpc2NvdW50IjowLjAs
-        InNtc190ZXh0IjoiVHUgcGFnbyBkZSBbTWV4aWNvXSBUZWxjZWwgcG9yICQy
-        MC4wME1YTiBzZSByZWFsaXpvIGNvbiDDqXhpdG8hIEFob3JhIHRhbWJpw6lu
-        IHB1ZWRlcyBwYWdhciB0dSBmYWN0dXJhIGRlIENGRSwgU2t5IHkgSW5mb25h
-        dml0IGVuIHR1IHRpZW5kYSBSZWdhbGlpLiIsImNyZWF0ZWRfYXQiOiIyMDE1
-        LTA5LTMwVDIxOjI4OjA4LjAwMFoiLCJwYXltZW50X3N0YXR1cyI6InNlbnQi
-        fV19
-    http_version: 
-  recorded_at: Tue, 22 Dec 2015 18:24:07 GMT
+      encoding: UTF-8
+      string: '{"transactions":[{"id":1,"external_id":"1-1591-2222222233-201509302128","biller_id":1591,"account_number":"2222222233","bill_amount":2.0,"bill_amount_currency":"USD","fx_rate":16.6048,"bill_amount_usd":2.0,"bill_amount_chain_currency":2.0,"payment_transaction_fee":0.0,"payment_total_usd":2.0,"payment_total_chain_currency":2.0,"chain_earned":0.5,"chain_paid":1.5,"starting_balance":-602.1,"ending_balance":-603.6,"hours_to_fulfill":0,"discount":0.0,"sms_text":null,"created_at":"2015-09-30T21:28:08Z","payment_status":"sent","bill_amount_local_currency":20.0,"local_currency":"MXN"}]}'
+    http_version:
+  recorded_at: Tue, 22 Mar 2016 20:52:16 GMT
 recorded_with: VCR 2.9.3

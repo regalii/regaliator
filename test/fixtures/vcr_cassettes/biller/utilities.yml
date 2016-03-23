@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://api.regalii.dev/rates/history
+    uri: http://api.regalii.dev/billers/utilities
     body:
       encoding: US-ASCII
       string: ''
@@ -16,9 +16,9 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Tue, 22 Mar 2016 19:46:14 GMT
+      - Tue, 22 Mar 2016 19:56:13 GMT
       Authorization:
-      - APIAuth api-key:+RNogcCfF1Aeyq6QLrH8nn74slo=
+      - APIAuth api-key:17LBCPSQes3BgiY6jc84+OhEen4=
   response:
     status:
       code: 200
@@ -33,22 +33,22 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - '"1c08052831a51483e433474e1a0cdb1f"'
+      - '"26f2a27ae80cf111448992a8984eb010"'
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 675769f9-19ca-483f-86a3-363c6d98ca10
+      - 614893e7-9a5e-4917-b3f0-05f7ea5b1eb3
       X-Runtime:
-      - '0.048035'
+      - '0.027250'
       Vary:
       - Origin
       Date:
-      - Tue, 22 Mar 2016 19:46:14 GMT
+      - Tue, 22 Mar 2016 19:56:13 GMT
       Connection:
       - close
     body:
       encoding: UTF-8
-      string: '{"2016-03-22":{}}'
-    http_version:
-  recorded_at: Tue, 22 Mar 2016 19:46:14 GMT
+      string: '{"billers":[{"id":3261,"name":"Adani Energy Limited","country":"IN","currency":"INR","biller_type":"Gas","bill_type":"account_number","can_check_balance":false,"mask":"9999999999","requires_name_on_account":false,"supports_partial_payments":true,"hours_to_fulfill":0,"account_number_digits":"10"}]}'
+    http_version: 
+  recorded_at: Tue, 22 Mar 2016 19:56:13 GMT
 recorded_with: VCR 2.9.3

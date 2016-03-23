@@ -1,26 +1,24 @@
 ---
 http_interactions:
 - request:
-    method: post
+    method: get
     uri: http://api.regalii.dev/rates
     body:
-      encoding: UTF-8
-      string: 'null'
+      encoding: US-ASCII
+      string: ''
     headers:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - application/vnd.regalii.v1.5+json
+      - application/vnd.regalii.v3.0+json
       User-Agent:
-      - Regaliator gem v1.5.0
+      - Regaliator gem v3.0.0
       Content-Type:
       - application/json
       Date:
-      - Tue, 22 Dec 2015 17:34:24 GMT
-      Content-Md5:
-      - N6YlnMDB2uKZp4Zkid/wvQ==
+      - Tue, 22 Mar 2016 19:46:14 GMT
       Authorization:
-      - APIAuth api-key:+xL1yqNmwctsEMg/6HDjNlM/T0I=
+      - APIAuth api-key:LmpI1fkCUOHXjII2UAIc7H4W2+o=
   response:
     status:
       code: 200
@@ -35,22 +33,22 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - '"2f2c2ea84123a22b112875bfefd7759b"'
+      - '"29503024667a3647d28134f8b3a74606"'
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 8f2b4132-1c48-42db-8b2e-9efc9d70e279
+      - ba2ba805-82d6-4e8c-80f7-409d4ecbf463
       X-Runtime:
-      - '0.033646'
+      - '0.032566'
       Vary:
       - Origin
       Date:
-      - Tue, 22 Dec 2015 17:34:24 GMT
+      - Tue, 22 Mar 2016 19:46:14 GMT
       Connection:
       - close
     body:
       encoding: UTF-8
-      string: '{"GBP":0.6479,"CAD":1.3095,"MXN":16.6048,"RD":44.365,"NIO":26.9834,"GTQ":7.5274,"HNL":21.4265,"COP":3024.4074,"BRL":3.9135,"PEN":3.164,"BOB":6.7661,"PHP":45.8195,"INR":64.3778,"JMD":115.885,"NGN":195.1023}'
-    http_version: 
-  recorded_at: Tue, 22 Dec 2015 17:34:24 GMT
+      string: '{"MXN":16.488,"RD":43.7165}'
+    http_version:
+  recorded_at: Tue, 22 Mar 2016 19:46:14 GMT
 recorded_with: VCR 2.9.3

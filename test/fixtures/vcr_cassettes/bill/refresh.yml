@@ -2,25 +2,25 @@
 http_interactions:
 - request:
     method: post
-    uri: http://api.regalii.dev/bill/refresh
+    uri: http://api.regalii.dev/bills/5/refresh
     body:
       encoding: UTF-8
-      string: '{"id":229}'
+      string: '{}'
     headers:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - application/vnd.regalii.v2.0+json
+      - application/vnd.regalii.v3.0+json
       User-Agent:
-      - Regaliator gem v2.0.0
+      - Regaliator gem v3.0.0
       Content-Type:
       - application/json
       Date:
-      - Thu, 14 Jan 2016 21:43:38 GMT
+      - Tue, 22 Mar 2016 21:38:08 GMT
       Content-Md5:
-      - hswnQzsMk/KUKlNUDHom0Q==
+      - mZFLkyvTelC5g8XnyQrpOw==
       Authorization:
-      - APIAuth api-key:Xkg0xvZTvQvdQdIIM36uRF1b0vY=
+      - APIAuth api-key:jA4Sr+PuLQ0sW64JdLTH/fsSp8Q=
   response:
     status:
       code: 200
@@ -35,22 +35,22 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - '"0a7b1c5d5bafe6dc56a85a11c61b0c01"'
+      - '"02af45393107ad8eb24c553d6647db85"'
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 3c25c7a6-42aa-4578-a1ca-d168bd39e8aa
+      - 4931bbaf-9adb-40e4-9906-83c7e8bfbc00
       X-Runtime:
-      - '0.026854'
+      - '0.033630'
       Vary:
       - Origin
       Date:
-      - Thu, 14 Jan 2016 21:43:38 GMT
+      - Tue, 22 Mar 2016 21:38:08 GMT
       Connection:
       - close
     body:
       encoding: UTF-8
-      string: '{"id":229,"biller_id":2,"account_number":"8081969","name_on_account":null,"due_date":null,"balance":24.0,"balance_currency":"RD","balance_in_chain_currency":0.56,"balance_updated_at":"2016-01-14T21:43:38Z","created_at":"2016-01-14T21:40:06Z","last_paid_at":null,"is_running":false,"error_with_account":false,"error_message":null,"secret_question":null,"secret_answer":null}'
+      string: '{"id":5,"biller_id":2,"account_number":"8081969","name_on_account":null,"due_date":null,"balance":44.0,"balance_currency":"RD","balance_in_chain_currency":1.01,"balance_updated_at":"2016-03-22T21:38:08Z","created_at":"2016-03-22T21:32:36Z","last_paid_at":null,"error_with_account":false,"error_message":null,"status":"updated","mfa_challenges":[]}'
     http_version: 
-  recorded_at: Thu, 14 Jan 2016 21:43:38 GMT
+  recorded_at: Tue, 22 Mar 2016 21:38:08 GMT
 recorded_with: VCR 2.9.3

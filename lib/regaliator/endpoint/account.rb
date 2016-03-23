@@ -1,7 +1,7 @@
 module Regaliator
   class Account < Endpoint
-    def self.info(*args)
-      Regaliator::Request.new('account', args.first).post
+    def self.info
+      Regaliator::Request.new('/account').get
     end
   end
 end
