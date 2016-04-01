@@ -17,28 +17,27 @@ module Regaliator
       @http_request = Net::HTTP::Post.new(uri.request_uri)
       @http_request.body = params.to_json
 
-      send
+      send_request
     end
 
     def get
       uri.query = URI.encode_www_form(params) if !params.empty?
       @http_request = Net::HTTP::Get.new(uri.request_uri)
 
-      send
+      send_request
     end
 
     def patch
       @http_request = Net::HTTP::Patch.new(uri.request_uri)
       @http_request.body = params.to_json
 
-      send
+      send_request
     end
 
-    def send
+    def send_request
       apply_headers
 
       response = http.request(http_request)
-
       Regaliator::Response.new(response)
     end
 
