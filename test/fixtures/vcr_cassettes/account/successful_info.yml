@@ -1,26 +1,24 @@
 ---
 http_interactions:
 - request:
-    method: post
+    method: get
     uri: http://api.regalii.dev/account
     body:
-      encoding: UTF-8
-      string: 'null'
+      encoding: US-ASCII
+      string: ''
     headers:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - application/vnd.regalii.v1.5+json
+      - application/vnd.regalii.v3.0+json
       User-Agent:
-      - Regaliator gem v1.5.0
+      - Regaliator gem v3.0.0
       Content-Type:
       - application/json
       Date:
-      - Tue, 22 Dec 2015 17:31:45 GMT
-      Content-Md5:
-      - N6YlnMDB2uKZp4Zkid/wvQ==
+      - Tue, 22 Mar 2016 19:36:08 GMT
       Authorization:
-      - APIAuth api-key:VE4RKENsTjVd964yXfcnOuE1nPc=
+      - APIAuth api-key:8YZx4JxLbBs+QmYnihKZGloAkdU=
   response:
     status:
       code: 200
@@ -39,18 +37,18 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 5596b5b8-f02e-41cd-84c3-cbc97471f311
+      - 9ec4f589-7aee-4f52-80bc-de9687ff47f6
       X-Runtime:
-      - '0.027975'
+      - '0.019721'
       Vary:
       - Origin
       Date:
-      - Tue, 22 Dec 2015 17:31:45 GMT
+      - Tue, 22 Mar 2016 19:36:08 GMT
       Connection:
       - close
     body:
       encoding: UTF-8
       string: '{"name":"ABC Ltd","balance":20000.0,"minimum_balance":-2000.0,"currency":"USD"}'
     http_version:
-  recorded_at: Tue, 22 Dec 2015 17:31:45 GMT
+  recorded_at: Tue, 22 Mar 2016 19:36:08 GMT
 recorded_with: VCR 2.9.3

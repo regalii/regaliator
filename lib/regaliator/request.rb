@@ -11,12 +11,32 @@ module Regaliator
       @params         = params
       @uri            = build_uri
       @http           = build_http
-      @http_request   = build_request
-
-      apply_headers
     end
 
     def post
+      @http_request = Net::HTTP::Post.new(uri.request_uri)
+      @http_request.body = params.to_json
+
+      send
+    end
+
+    def get
+      uri.query = URI.encode_www_form(params) if !params.empty?
+      @http_request = Net::HTTP::Get.new(uri.request_uri)
+
+      send
+    end
+
+    def patch
+      @http_request = Net::HTTP::Patch.new(uri.request_uri)
+      @http_request.body = params.to_json
+
+      send
+    end
+
+    def send
+      apply_headers
+
       response = http.request(http_request)
 
       Regaliator::Response.new(response)
@@ -26,7 +46,7 @@ module Regaliator
 
     def build_uri
       protocol = config.secure? ? 'https' : 'http'
-      url = "#{protocol}://#{config.host}/#{endpoint}"
+      url = ["#{protocol}://#{config.host}", endpoint].join
       uri = URI.parse(url)
       uri
     end
@@ -43,12 +63,6 @@ module Regaliator
       http.ssl_version  = :TLSv1
 
       http
-    end
-
-    def build_request
-      request = Net::HTTP::Post.new(uri.request_uri)
-      request.body = params.to_json
-      request
     end
 
     def apply_headers
@@ -72,11 +86,11 @@ module Regaliator
     end
 
     def canonical_string
-      canonical_string = [CONTENT_TYPE, content_md5, http_request.path, timestamp].join(',')
+      [CONTENT_TYPE, content_md5, http_request.path, timestamp].join(',')
     end
 
     def content_md5
-      Digest::MD5.base64digest(http_request.body)
+      Digest::MD5.base64digest(http_request.body) if http_request.body
     end
   end
 end

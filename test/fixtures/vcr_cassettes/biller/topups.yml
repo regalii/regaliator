@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://api.regalii.dev/rates/history
+    uri: http://api.regalii.dev/billers/topups
     body:
       encoding: US-ASCII
       string: ''
@@ -16,9 +16,9 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Tue, 22 Mar 2016 19:46:14 GMT
+      - Tue, 22 Mar 2016 19:56:13 GMT
       Authorization:
-      - APIAuth api-key:+RNogcCfF1Aeyq6QLrH8nn74slo=
+      - APIAuth api-key:M5WcYibh66vodyol4TPXNuiScdk=
   response:
     status:
       code: 200
@@ -33,22 +33,22 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - '"1c08052831a51483e433474e1a0cdb1f"'
+      - '"0f285178775f3ad6995bb69c496ce3aa"'
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 675769f9-19ca-483f-86a3-363c6d98ca10
+      - 2cd5d759-7b6c-4394-998a-c38a3646892f
       X-Runtime:
-      - '0.048035'
+      - '0.081188'
       Vary:
       - Origin
       Date:
-      - Tue, 22 Mar 2016 19:46:14 GMT
+      - Tue, 22 Mar 2016 19:56:13 GMT
       Connection:
       - close
     body:
       encoding: UTF-8
-      string: '{"2016-03-22":{}}'
-    http_version:
-  recorded_at: Tue, 22 Mar 2016 19:46:14 GMT
+      string: '{"billers":[{"id":4842,"name":"Alegro","country":"EC","currency":"USD","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":["6.00","12.00"],"topup_fxrate":null,"mask":null,"topup_commission":11.0,"account_number_digits":"8"}]}'
+    http_version: 
+  recorded_at: Tue, 22 Mar 2016 19:56:13 GMT
 recorded_with: VCR 2.9.3
