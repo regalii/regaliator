@@ -1,6 +1,6 @@
 # Regaliator
 
-Ruby wrapper for Regalii's API. The full API docs can be found at: https://www.regalii.com/api/overview
+Ruby wrapper for Regalii's API. The full API docs can be found at: https://www.regalii.com/api/v3/overview
 
 ## Installation
 
@@ -43,7 +43,7 @@ Add the following to config/initializers/regaliator.rb:
 **Success:**
 
 ```ruby
-> response = Regaliator::Bill.consult(biller_id: 1, account_number: '12345')
+> response = Regaliator::Bill.show(1)
 > response.success?
 => true
 > response.data
@@ -51,7 +51,7 @@ Add the following to config/initializers/regaliator.rb:
 ```
 
 ```ruby
-> response = Regaliator::Bill.pay(biller_id: 1, account_number: '12345', amount: 13.0, currency: 'MXN')
+> response = Regaliator::Bill.pay(1, amount: 13.0, currency: 'MXN')
 > response.success?
 => true
 > response.data
@@ -75,5 +75,5 @@ The following examples will show how to use the Regaliator gem to connect to the
 ### Billers List
 https://www.regalii.com/api/billers
 ```ruby
-response = Regaliator::Biller.list
+response = Regaliator::Biller.credentials
 ```
