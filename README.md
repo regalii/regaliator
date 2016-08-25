@@ -75,5 +75,5 @@ The following examples will show how to use the Regaliator gem to connect to the
 ### Billers List
 https://www.regalii.com/billers
 ```ruby
-response = Regaliator::Biller.credentials
+response = Regaliator::Biller.utilities
 ```
