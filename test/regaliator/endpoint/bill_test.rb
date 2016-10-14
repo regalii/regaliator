@@ -94,6 +94,33 @@ class Regaliator::BillTest < Minitest::Test
     end
   end
 
+  def test_xdata
+    VCR.use_cassette('bill/xdata') do
+      response = Regaliator::Bill.xdata(674101)
+
+      assert response.success?
+
+      hash = {
+        "id"=>674101,
+        "biller_id"=>6503,
+        "account_number"=>"12345",
+        "name_on_account"=>"Kelly Gruber",
+        "due_date"=>"2016-10-10",
+        "balance"=>10.5,
+        "balance_currency"=>"USD",
+        "balance_updated_at"=>"2016-08-03T18:35:21Z",
+        "created_at"=>"2016-06-14T20:57:08Z",
+        "status"=>"updated",
+        "address"=>nil,
+        "payment_method"=>nil,
+        "statements"=>[],
+        "subordinates"=>[]
+      }
+
+      assert_equal hash, response.data
+    end
+  end
+
   def test_refresh
     VCR.use_cassette('bill/refresh') do
       response = Regaliator::Bill.refresh(5)
