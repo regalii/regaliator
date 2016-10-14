@@ -19,5 +19,9 @@ module Regaliator
     def self.pay(id, params = {})
       Regaliator::Request.new("/bills/#{id}/pay", params).post
     end
+
+    def self.xdata(id)
+      Regaliator::Request.new("/bills/#{id}/xdata").get
+    end
   end
 end
