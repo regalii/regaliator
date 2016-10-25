@@ -23,5 +23,9 @@ module Regaliator
     def self.xdata(id)
       Regaliator::Request.new("/bills/#{id}/xdata").get
     end
+
+    def self.xchange(id, params = {})
+      Regaliator::Request.new("/bills/#{id}/xchange").post
+    end
   end
 end

@@ -1,0 +1,56 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://api.regalii.dev/bills/674101/xchange
+    body:
+      encoding: UTF-8
+      string: '{"cc_number":"4242424242424242","cc_name_on_card":"John Smith","cc_brand":"visa", "cc_expiry_month":"12","cc_expiry_year":"2020","cc_security_code":"123","cc_address":"123 Fake Street","cc_city":"New York","cc_state":"NY","cc_zip":"10001","cc_country":"US"}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/vnd.regalii.v3.0+json
+      User-Agent:
+      - Regaliator gem v3.0.0
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 22 Mar 2016 21:32:35 GMT
+      Content-Md5:
+      - HACXtG3Wd6zozvcZfojLgg==
+      Authorization:
+      - APIAuth api-key:23WWXRbfPpfoeaiiR9eumOPICfc=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"29436f888cb41ed5a3a8904195fb0042"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - f7b7b378-7438-4fe3-83ec-da991558a8b3
+      X-Runtime:
+      - '0.119423'
+      Vary:
+      - Origin
+      Date:
+      - Tue, 22 Mar 2016 21:32:36 GMT
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"id":674101,"biller_id":6503,"status":"updating","error_message":null,"account_number":"12345","due_date":"2016-10-10","balance":10.5,"balance_currency":"USD"}'
+    http_version:
+  recorded_at: Tue, 22 Mar 2016 21:32:36 GMT
+recorded_with: VCR 2.9.3
