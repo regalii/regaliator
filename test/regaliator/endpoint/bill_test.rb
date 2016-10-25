@@ -184,4 +184,38 @@ class Regaliator::BillTest < Minitest::Test
       assert_equal hash, response.data
     end
   end
+
+  def test_xchange
+    VCR.use_cassette('bill/xchange') do
+      response = Regaliator::Bill.xchange(674101, {
+        "cc_number"=>"4242424242424242",
+        "cc_name_on_card"=>"John Smith",
+        "cc_brand"=>"visa",
+        "cc_expiry_month"=>"12",
+        "cc_expiry_year"=>"2020",
+        "cc_security_code"=>"123",
+        "cc_address"=>"123 Fake Street",
+        "cc_city"=>"New York",
+        "cc_state"=>"NY",
+        "cc_zip"=>"10001",
+        "cc_country"=>"US"
+      })
+
+      assert response.success?
+
+      hash = {
+        "id"=>674101,
+        "biller_id"=>6503,
+        "status"=>"updating",
+        "error_message"=>nil,
+        "account_number"=>"12345",
+        "due_date"=>"2016-10-10",
+        "balance"=>10.5,
+        "balance_currency"=>"USD"
+      }
+
+      assert_equal hash, response.data
+    end
+  end
+
 end
