@@ -184,4 +184,14 @@ class Regaliator::BillTest < Minitest::Test
       assert_equal hash, response.data
     end
   end
+
+  def test_list
+    VCR.use_cassette('bills') do
+      response = Regaliator::Bill.list
+
+      assert response.success?
+
+      # TODO add stubbed response from VCR from api.regalii.dev
+    end
+  end
 end
