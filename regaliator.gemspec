@@ -6,17 +6,19 @@ require 'regaliator/version'
 Gem::Specification.new do |spec|
   spec.name          = "regaliator"
   spec.version       = Regaliator::VERSION
-  spec.authors       = ["Hesham El-Nahhas"]
-  spec.email         = ["hesham@regalii.com"]
+  spec.authors       = ["Hesham El-Nahhas", "Geoffrey Roguelon"]
+  spec.email         = ["hesham@regalii.com", "geoffrey@regalii.com"]
   spec.summary       = %q{Ruby wrapper for Regalii's API}
   spec.description   = ""
-  spec.homepage      = "https://www.regalii.com"
+  spec.homepage      = "https://www.regalii.com/api"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
+
+  spec.required_ruby_version = ['>= 2.1.0', '<= 2.4']
 
   spec.add_dependency 'json'
 
