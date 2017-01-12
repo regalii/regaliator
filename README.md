@@ -77,3 +77,16 @@ https://www.regalii.com/billers
 ```ruby
 response = Regaliator::Biller.utilities
 ```
+
+## Tests
+
+To run the tests, run:
+```bash
+bundle exec rake test
+```
+
+To test on each file change, run:
+
+```bash
+bundle exec guard
+```
