@@ -12,30 +12,35 @@ gem 'regaliator', github: 'regalii/regaliator'
 
 And then execute:
 
-    $ bundle
+```
+$ bundle
+```
 
 ## Configuration
 
 Add the following to config/initializers/regaliator.rb:
 
 ```ruby
-  Regaliator.configure do |config|
-    # Authentication settings
-    config.api_key      = 'your-api-key'
-    config.secret_key   = 'your-secret-key'
+Rails.application.config.x.regaliator = Regaliator.new do |config|
+  # Version target
+  config.version      = '3.0'
 
-    # API host settings
-    config.host         = 'api.casiregalii.com'
-    config.open_timeout = 5
-    config.read_timeout = 10
-    config.use_ssl      = true
+  # Authentication settings
+  config.api_key      = 'your-api-key'
+  config.secret_key   = 'your-secret-key'
 
-    # Proxy settings
-    config.proxy_host   = nil
-    config.proxy_port   = nil
-    config.proxy_user   = nil
-    config.proxy_pass   = nil
-  end
+  # API host settings
+  config.host         = 'api.casiregalii.com'
+  config.open_timeout = 5
+  config.read_timeout = 10
+  config.use_ssl      = true
+
+  # Proxy settings
+  config.proxy_host   = nil
+  config.proxy_port   = nil
+  config.proxy_user   = nil
+  config.proxy_pass   = nil
+end
 ```
 
 ## Requests
@@ -43,7 +48,7 @@ Add the following to config/initializers/regaliator.rb:
 **Success:**
 
 ```ruby
-> response = Regaliator::Bill.show(1)
+> response = Rails.application.config.x.regaliator.bill.show(1)
 > response.success?
 => true
 > response.data
@@ -51,7 +56,7 @@ Add the following to config/initializers/regaliator.rb:
 ```
 
 ```ruby
-> response = Regaliator::Bill.pay(1, amount: 13.0, currency: 'MXN')
+> response = Rails.application.config.x.regaliator.bill.pay(1, amount: 13.0, currency: 'MXN')
 > response.success?
 => true
 > response.data
@@ -61,7 +66,7 @@ Add the following to config/initializers/regaliator.rb:
 **Failure:**
 
 ```ruby
-> response = Regaliator::Bill.pay(biller_id: 1, account_number: '12345', amount: 0.0, currency: 'MXN')
+> response = Rails.application.config.x.regaliator.bill.pay(biller_id: 1, account_number: '12345', amount: 0.0, currency: 'MXN')
 > response.success?
 => false
 > response.data
@@ -75,18 +80,18 @@ The following examples will show how to use the Regaliator gem to connect to the
 ### Billers List
 https://www.regalii.com/billers
 ```ruby
-response = Regaliator::Biller.utilities
+response = Rails.application.config.x.regaliator.biller.utilities
 ```
 
 ## Tests
 
 To run the tests, run:
-```bash
-bundle exec rake test
+```
+$ bundle exec rake test
 ```
 
 To test on each file change, run:
 
-```bash
-bundle exec guard
+```
+$ bundle exec guard
 ```
