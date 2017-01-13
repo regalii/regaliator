@@ -1,26 +1,22 @@
-require "json"
-require 'base64'
-require "regaliator/version"
-require "regaliator/configuration"
-require "regaliator/request"
-require "regaliator/response"
-require "regaliator/endpoint"
-require "regaliator/endpoint/account"
-require "regaliator/endpoint/bill"
-require "regaliator/endpoint/biller"
-require "regaliator/endpoint/rate"
-require "regaliator/endpoint/transaction"
+require 'regaliator/configuration'
+require 'regaliator/api_version_error'
+require 'regaliator/v30'
 
 module Regaliator
+  API_VERSIONS = [V30].each_with_object({}) { |version, hsh|
+    hsh[version::API_VERSION] = version
+  }.freeze
+
   class << self
-    attr_writer :configuration
-  end
+    def new(config = nil)
+      config ||= Configuration.new
+      yield(config) if block_given?
 
-  def self.configuration
-    @configuration ||= Configuration.new
-  end
-
-  def self.configure
-    yield(configuration)
+      if config && API_VERSIONS.key?(config.version)
+        Kernel.const_get("#{API_VERSIONS[config.version]}::Client").new(config)
+      else
+        raise APIVersionError.new(config.version)
+      end
+    end
   end
 end
