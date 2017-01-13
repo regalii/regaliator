@@ -1,4 +1,4 @@
 module Regaliator
-  VERSION     = "3.1.0-pre"
   API_VERSION = "3.0"
+  VERSION = '4.0.0.pre'
 end

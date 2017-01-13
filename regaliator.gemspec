@@ -6,8 +6,8 @@ require 'regaliator/version'
 Gem::Specification.new do |spec|
   spec.name          = "regaliator"
   spec.version       = Regaliator::VERSION
-  spec.authors       = ["Hesham El-Nahhas", "Geoffrey Roguelon"]
-  spec.email         = ["hesham@regalii.com", "geoffrey@regalii.com"]
+  spec.authors       = ["Hesham El-Nahhas", "Leigh Halliday", "Geoffrey Roguelon", ]
+  spec.email         = ["hesham@regalii.com", "leigh@regalii.com", "geoffrey@regalii.com"]
   spec.summary       = %q{Ruby wrapper for Regalii's API}
   spec.description   = ""
   spec.homepage      = "https://www.regalii.com/api"
