@@ -14,7 +14,7 @@ module Regaliator
       end
 
       def test_list
-        VCR.use_cassette('transaction/list') do |cassette|
+        VCR.use_cassette('v30/transaction/list') do |cassette|
           response = Regaliator.new(@config).transaction.list
 
           assert response.success?
@@ -23,7 +23,7 @@ module Regaliator
       end
 
       def test_with_search
-        VCR.use_cassette('transaction/search') do |cassette|
+        VCR.use_cassette('v30/transaction/search') do |cassette|
           response = Regaliator.new(@config).transaction.list('q[id_eq]' => 1)
 
           assert response.success?

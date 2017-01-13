@@ -14,7 +14,7 @@ module Regaliator
       end
 
       def test_list
-        VCR.use_cassette('rate/list') do |cassette|
+        VCR.use_cassette('v30/rate/list') do |cassette|
           response = Regaliator.new(@config).rate.list
 
           assert response.success?
@@ -23,7 +23,7 @@ module Regaliator
       end
 
       def test_history
-        VCR.use_cassette('rate/history') do |cassette|
+        VCR.use_cassette('v30/rate/history') do |cassette|
           response = Regaliator.new(@config).rate.history
 
           assert response.success?

@@ -14,7 +14,7 @@ module Regaliator
       end
 
       def test_create
-        VCR.use_cassette('bill/create') do |cassette|
+        VCR.use_cassette('v30/bill/create') do |cassette|
           response = Regaliator.new(@config).bill.create(biller_id: 2, account_number: '8081969')
 
           assert response.success?
@@ -23,7 +23,7 @@ module Regaliator
       end
 
       def test_update
-        VCR.use_cassette('bill/update') do |cassette|
+        VCR.use_cassette('v30/bill/update') do |cassette|
           response = Regaliator.new(@config).bill.update(5, name_on_account: 'Test name')
 
           assert response.success?
@@ -32,7 +32,7 @@ module Regaliator
       end
 
       def test_show
-        VCR.use_cassette('bill/show') do |cassette|
+        VCR.use_cassette('v30/bill/show') do |cassette|
           response = Regaliator.new(@config).bill.show(5)
 
           assert response.success?
@@ -41,7 +41,7 @@ module Regaliator
       end
 
       def test_xdata
-        VCR.use_cassette('bill/xdata') do |cassette|
+        VCR.use_cassette('v30/bill/xdata') do |cassette|
           response = Regaliator.new(@config).bill.xdata(674101)
 
           assert response.success?
@@ -50,7 +50,7 @@ module Regaliator
       end
 
       def test_refresh
-        VCR.use_cassette('bill/refresh') do |cassette|
+        VCR.use_cassette('v30/bill/refresh') do |cassette|
           response = Regaliator.new(@config).bill.refresh(5)
 
           assert response.success?
@@ -59,7 +59,7 @@ module Regaliator
       end
 
       def test_pay
-        VCR.use_cassette('bill/pay') do |cassette|
+        VCR.use_cassette('v30/bill/pay') do |cassette|
           response = Regaliator.new(@config).bill.pay(5, amount: 758.0, currency: 'RD')
 
           assert response.success?
@@ -68,7 +68,7 @@ module Regaliator
       end
 
       def test_list
-        VCR.use_cassette('bill/list') do
+        VCR.use_cassette('v30/bill/list') do
           response = Regaliator.new(@config).bill.list
 
           assert response.success?

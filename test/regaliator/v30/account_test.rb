@@ -14,7 +14,7 @@ module Regaliator
       end
 
       def test_successful_info
-        VCR.use_cassette('account/successful_info') do |cassette|
+        VCR.use_cassette('v30/account/successful_info') do |cassette|
           response = Regaliator.new(@config).account.info
 
           assert response.success?
@@ -25,7 +25,7 @@ module Regaliator
       def test_failed_info
         @config.secret_key = 'bogus'
 
-        VCR.use_cassette('account/failed_info') do |cassette|
+        VCR.use_cassette('v30/account/failed_info') do |cassette|
           response = Regaliator.new(@config).account.info
 
           refute response.success?

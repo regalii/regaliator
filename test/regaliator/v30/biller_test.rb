@@ -14,7 +14,7 @@ module Regaliator
       end
 
       def test_list_credentials
-        VCR.use_cassette('biller/credentials') do |cassette|
+        VCR.use_cassette('v30/biller/credentials') do |cassette|
           response = Regaliator.new(@config).biller.credentials
 
           assert response.success?
@@ -23,7 +23,7 @@ module Regaliator
       end
 
       def test_list_topups
-        VCR.use_cassette('biller/topups') do |cassette|
+        VCR.use_cassette('v30/biller/topups') do |cassette|
           response = Regaliator.new(@config).biller.topups
 
           assert response.success?
@@ -32,7 +32,7 @@ module Regaliator
       end
 
       def test_list_utilities
-        VCR.use_cassette('biller/utilities') do |cassette|
+        VCR.use_cassette('v30/biller/utilities') do |cassette|
           response = Regaliator.new(@config).biller.utilities
 
           assert response.success?
