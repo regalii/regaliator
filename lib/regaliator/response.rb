@@ -1,3 +1,6 @@
+require 'json'
+require 'net/http'
+
 module Regaliator
   class Response
     attr_reader :success
