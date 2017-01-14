@@ -1,0 +1,52 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://api.regalii.dev/rates
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/vnd.regalii.v1.5+json
+      User-Agent:
+      - Regaliator gem v4.0.0.pre
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 14 Jan 2017 03:18:06 GMT
+      Content-Md5:
+      - mZFLkyvTelC5g8XnyQrpOw==
+      Authorization:
+      - APIAuth testing:HgNEoobM5MWQ0HamX/GyukDPsHM=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"64b2e57f343fefa48ce2410586b51df2"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 0cfdcc39-8448-44b9-b96f-25c81f138a0c
+      X-Runtime:
+      - '0.105806'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"GBP":0.7892,"CAD":1.3171,"MXN":20.2181,"RD":45.3925,"NIO":28.5876,"GTQ":7.3642,"HNL":22.7156,"COP":3088.617,"BRL":3.325,"PEN":3.3473,"BOB":6.7776,"PHP":48.7303,"INR":67.2249,"JMD":126.5856,"NGN":308.4099}'
+    http_version: 
+  recorded_at: Sat, 14 Jan 2017 03:18:06 GMT
+recorded_with: VCR 2.9.3

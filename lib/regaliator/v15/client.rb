@@ -2,6 +2,7 @@ require 'regaliator/client'
 require 'regaliator/v15/account'
 require 'regaliator/v15/bill'
 require 'regaliator/v15/biller'
+require 'regaliator/v15/rate'
 
 module Regaliator
   module V15
@@ -16,6 +17,10 @@ module Regaliator
 
       def biller
         Biller.new(config)
+      end
+
+      def rate
+        Rate.new(config)
       end
     end
   end

@@ -1,0 +1,52 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://api.regalii.dev/rates/history
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/vnd.regalii.v1.5+json
+      User-Agent:
+      - Regaliator gem v4.0.0.pre
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 14 Jan 2017 03:18:06 GMT
+      Content-Md5:
+      - mZFLkyvTelC5g8XnyQrpOw==
+      Authorization:
+      - APIAuth testing:MYECMMDEUGYe+CS/SQt2fysl8BA=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"a10cc8cb07e1d049c76f06205b0a4ff9"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 1184305f-d4ed-4057-aae5-aea7e1ed40f3
+      X-Runtime:
+      - '0.145673'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"2017-01-13":{},"2017-01-12":{},"2017-01-11":{},"2017-01-10":{},"2017-01-09":{},"2017-01-08":{},"2017-01-07":{},"2017-01-06":{},"2017-01-05":{},"2017-01-04":{},"2017-01-03":{},"2017-01-02":{},"2017-01-01":{},"2016-12-31":{},"2016-12-30":{},"2016-12-29":{},"2016-12-28":{},"2016-12-27":{},"2016-12-26":{},"2016-12-25":{},"2016-12-24":{},"2016-12-23":{},"2016-12-22":{},"2016-12-21":{},"2016-12-20":{},"2016-12-19":{},"2016-12-18":{},"2016-12-17":{},"2016-12-16":{},"2016-12-15":{},"2016-12-14":{}}'
+    http_version: 
+  recorded_at: Sat, 14 Jan 2017 03:18:06 GMT
+recorded_with: VCR 2.9.3
