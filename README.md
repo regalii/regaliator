@@ -1,6 +1,8 @@
 # Regaliator
 
-Ruby wrapper for Regalii's API. The full API docs can be found at: https://www.regalii.com/api/v3/overview
+Ruby wrapper for Regalii's API. The full API docs:
+  * Version 3.0 (recommended): https://www.regalii.com/api/v3/overview ;
+  * Version 1.5 : https://www.regalii.com/api/v1/overview
 
 ## Installation
 
@@ -40,6 +42,20 @@ Rails.application.config.x.regaliator = Regaliator.new do |config|
   config.proxy_port   = nil
   config.proxy_user   = nil
   config.proxy_pass   = nil
+end
+```
+
+## Versions
+
+To switch the version API, you have just to set the version in the configuration,
+for instance, the version `1.5`:
+
+```ruby
+Rails.application.config.x.regaliator = Regaliator.new do |config|
+  # Version target
+  config.version = '1.5'
+
+  # ...
 end
 ```
 

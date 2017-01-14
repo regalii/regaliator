@@ -1,0 +1,52 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://api.regalii.dev/bill/pay
+    body:
+      encoding: UTF-8
+      string: '{"biller_id":14,"account_number":"6463060086","user_id":12981,"amount":99,"currency":"DOP"}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/vnd.regalii.v1.5+json
+      User-Agent:
+      - Regaliator gem v4.0.0.pre
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 14 Jan 2017 03:16:19 GMT
+      Content-Md5:
+      - xJsmPjqUPl5GbiY8FJOi4w==
+      Authorization:
+      - APIAuth testing:eL/csrwvKyNAvbU4bTytaF1WLQc=
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"8da6e3ec689c58a4bc6e77ef66f118e8"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 47fdc21e-0a6d-4df1-9c6b-c2dc196356db
+      X-Runtime:
+      - '0.095488'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":3209414,"external_id":null,"biller_id":14,"account_number":"6463060086","bill_amount":99.0,"bill_amount_currency":"DOP","fx_rate":44.4661,"bill_amount_usd":2.23,"bill_amount_chain_currency":2.23,"payment_transaction_fee":3.0,"payment_total_usd":5.23,"payment_total_chain_currency":5.23,"chain_earned":1.5,"chain_paid":3.73,"starting_balance":-3682.46,"ending_balance":-3686.19,"hours_to_fulfill":0,"sms_text":null,"created_at":"2017-01-14T03:16:19Z","bill_amount_local_currency":4402.1439,"local_currency":"RD"}'
+    http_version:
+  recorded_at: Sat, 14 Jan 2017 03:16:19 GMT
+recorded_with: VCR 2.9.3
