@@ -1,0 +1,50 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.regalii.dev/account
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/vnd.regalii.v3.0+json
+      User-Agent:
+      - Regaliator gem v4.0.0.pre
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 14 Jan 2017 03:12:44 GMT
+      Authorization:
+      - APIAuth testing:+QS9rLzrqIB7kt2ZKNRUTy8RPOo=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"0c8a1509449a43025392be608ef633c4"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 7fa2702b-b31f-4804-a913-524d0e6fe4bd
+      X-Runtime:
+      - '0.048768'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"name":"Regalii","balance":1797.41,"minimum_balance":-2000.0,"currency":"USD"}'
+    http_version: 
+  recorded_at: Sat, 14 Jan 2017 03:12:44 GMT
+recorded_with: VCR 2.9.3
