@@ -23,7 +23,7 @@ $ bundle
 Add the following to config/initializers/regaliator.rb:
 
 ```ruby
-Rails.application.config.x.regaliator = Regaliator.new do |config|
+Regaliator.configure do |config|
   # Version target
   config.version      = '3.0'
 
@@ -51,7 +51,7 @@ To switch the version API, you have just to set the version in the configuration
 for instance, the version `1.5`:
 
 ```ruby
-Rails.application.config.x.regaliator = Regaliator.new do |config|
+Regaliator.configure do |config|
   # Version target
   config.version = '1.5'
 
@@ -64,7 +64,7 @@ end
 **Success:**
 
 ```ruby
-> response = Rails.application.config.x.regaliator.bill.show(1)
+> response = Regaliator.new.bill.show(1)
 > response.success?
 => true
 > response.data
@@ -72,7 +72,7 @@ end
 ```
 
 ```ruby
-> response = Rails.application.config.x.regaliator.bill.pay(1, amount: 13.0, currency: 'MXN')
+> response = Regaliator.new.bill.pay(1, amount: 13.0, currency: 'MXN')
 > response.success?
 => true
 > response.data
@@ -82,7 +82,7 @@ end
 **Failure:**
 
 ```ruby
-> response = Rails.application.config.x.regaliator.bill.pay(biller_id: 1, account_number: '12345', amount: 0.0, currency: 'MXN')
+> response = Regaliator.new.bill.pay(biller_id: 1, account_number: '12345', amount: 0.0, currency: 'MXN')
 > response.success?
 => false
 > response.data
@@ -96,7 +96,7 @@ The following examples will show how to use the Regaliator gem to connect to the
 ### Billers List
 https://www.regalii.com/billers
 ```ruby
-response = Rails.application.config.x.regaliator.biller.utilities
+response = Regaliator.new.biller.utilities
 ```
 
 ## Tests
