@@ -1,24 +1,26 @@
 ---
 http_interactions:
 - request:
-    method: get
+    method: post
     uri: http://api.regalii.dev/account
     body:
-      encoding: US-ASCII
-      string: ''
+      encoding: UTF-8
+      string: "{}"
     headers:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - application/vnd.regalii.v3.0+json
+      - application/vnd.regalii.v1.5+json
       User-Agent:
-      - Regaliator gem v3.0.0
+      - Regaliator gem v4.0.0.pre
       Content-Type:
       - application/json
       Date:
-      - Tue, 22 Mar 2016 19:36:07 GMT
+      - Sat, 14 Jan 2017 03:12:57 GMT
+      Content-Md5:
+      - mZFLkyvTelC5g8XnyQrpOw==
       Authorization:
-      - APIAuth api-key:vBbD1MBjhQfVRgfOpCc6WPsRQuI=
+      - APIAuth testing:Tln5G5eTaMgHcxxsEHg+J6LYiOE=
   response:
     status:
       code: 401
@@ -35,18 +37,14 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 08aedf09-deab-4c9b-ba18-ea100f209958
+      - 9ce7f4d8-f62f-4f28-801c-53f25ef7cd38
       X-Runtime:
-      - '0.049840'
-      Vary:
-      - Origin
-      Date:
-      - Tue, 22 Mar 2016 19:36:08 GMT
-      Connection:
-      - close
+      - '0.069076'
+      Transfer-Encoding:
+      - chunked
     body:
       encoding: UTF-8
       string: '{"message":"Unauthorized"}'
     http_version: 
-  recorded_at: Tue, 22 Mar 2016 19:36:08 GMT
+  recorded_at: Sat, 14 Jan 2017 03:12:57 GMT
 recorded_with: VCR 2.9.3
