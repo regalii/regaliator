@@ -47,4 +47,20 @@ class RegaliatorTest < Minitest::Test
     assert_equal '1.5', subject.config.version
     assert_equal '3.0', Regaliator.new.config.version
   end
+
+  def test_module_handles_endpoints_directly
+    client_methods = Regaliator::Client.public_instance_methods
+
+    Regaliator::API_VERSIONS.each do |version, client|
+      Regaliator.configure { |config| config.version = version }
+      module_version = Regaliator.const_get("#{client.to_s.split('::')[1]}")
+
+      (client.public_instance_methods - client_methods).each do |method|
+        klass = module_version.const_get(method.to_s.capitalize)
+        assert_instance_of klass, Regaliator.send(method)
+      end
+    end
+
+    Regaliator.configure { |config| config.version = nil }
+  end
 end
