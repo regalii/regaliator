@@ -19,7 +19,7 @@ module Regaliator
     end
 
     def secure?
-      !!use_ssl
+      use_ssl == true
     end
   end
 end
