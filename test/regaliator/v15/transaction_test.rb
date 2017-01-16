@@ -30,6 +30,33 @@ module Regaliator
           assert_equal extract_hsh(cassette), response.data
         end
       end
+
+      def test_pay
+        VCR.use_cassette('v15/transaction/pay') do |cassette|
+          response = Regaliator.new(@config).transaction.pay(id: 1)
+
+          assert response.success?
+          assert_equal extract_hsh(cassette), response.data
+        end
+      end
+
+      def test_reverse
+        VCR.use_cassette('v15/transaction/reverse') do |cassette|
+          response = Regaliator.new(@config).transaction.reverse(id: 1)
+
+          assert response.success?
+          assert_equal extract_hsh(cassette), response.data
+        end
+      end
+
+      def test_cancel
+        VCR.use_cassette('v15/transaction/cancel') do |cassette|
+          response = Regaliator.new(@config).transaction.cancel(id: 1)
+
+          assert response.success?
+          assert_equal extract_hsh(cassette), response.data
+        end
+      end
     end
   end
 end
