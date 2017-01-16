@@ -107,7 +107,7 @@ module Regaliator
 
     def test_secure_method_returns_boolean
       assert_equal true, Configuration.new.tap { |c| c.use_ssl = true }.secure?
-      assert_equal true, Configuration.new.tap { |c| c.use_ssl = 'hello' }.secure?
+      assert_equal false, Configuration.new.tap { |c| c.use_ssl = 'hello' }.secure?
       assert_equal false, Configuration.new.tap { |c| c.use_ssl = false }.secure?
       assert_equal false, Configuration.new.tap { |c| c.use_ssl = nil }.secure?
     end

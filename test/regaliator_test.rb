@@ -8,7 +8,7 @@ class RegaliatorTest < Minitest::Test
   def test_api_versions_has_good_format
     Regaliator::API_VERSIONS.each do |version, client|
       assert_instance_of String, version
-      assert_instance_of Module, client
+      assert_instance_of Class, client
     end
   end
 

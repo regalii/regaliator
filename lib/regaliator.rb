@@ -4,8 +4,9 @@ require 'regaliator/v15'
 require 'regaliator/v30'
 
 module Regaliator
-  API_VERSIONS = [V15, V30].each_with_object({}) { |version, hsh|
-    hsh[version::API_VERSION] = version
+  API_VERSIONS = {
+    V15::API_VERSION => V15::Client,
+    V30::API_VERSION => V30::Client
   }.freeze
 
   class << self
@@ -22,7 +23,7 @@ module Regaliator
       yield(config) if block_given?
 
       if API_VERSIONS.key?(config.version)
-        Kernel.const_get("#{API_VERSIONS[config.version]}::Client").new(config)
+        API_VERSIONS[config.version].new(config)
       else
         raise APIVersionError.new(config.version)
       end
