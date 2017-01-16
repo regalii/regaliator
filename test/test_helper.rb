@@ -15,5 +15,12 @@ VCR.configure do |c|
 end
 
 def extract_hsh(cassette)
-  JSON.load(cassette.serializable_hash['http_interactions'][0]['response']['body']['string'])
+  response = cassette.serializable_hash['http_interactions'][0]['response']
+
+  JSON.parse(response['body']['string']).tap do |body|
+    pagination = response['headers']['X-Pagination']
+    if !pagination.nil? && !pagination.empty?
+      body.merge!('pagination' => JSON.parse(response['headers']['X-Pagination'][0]))
+    end
+  end
 end
