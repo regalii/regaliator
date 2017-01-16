@@ -22,10 +22,19 @@ module Regaliator
       config = get_configuration(arg)
       yield(config) if block_given?
 
-      if API_VERSIONS.key?(config.version)
-        API_VERSIONS[config.version].new(config)
-      else
+      unless API_VERSIONS.key?(config.version)
         raise APIVersionError.new(config.version)
+      end
+
+      API_VERSIONS[config.version].new(config)
+    end
+
+    def method_missing(method_name, *args)
+      client = new
+      if client.respond_to?(method_name)
+        client.send(method_name, *args)
+      else
+        super
       end
     end
 
