@@ -1,7 +1,8 @@
 # Regaliator
 
 Ruby wrapper for Regalii's API. The full API docs:
-  * Version 3.0 (recommended): https://www.regalii.com/api/v3/overview ;
+  * Version 3.1 (recommended): https://www.regalii.com/api/v3/overview ;
+  * Version 3.0 : https://www.regalii.com/api/v3/overview ;
   * Version 1.5 : https://www.regalii.com/api/v1/overview
 
 ## Installation
@@ -25,7 +26,7 @@ Add the following to config/initializers/regaliator.rb:
 ```ruby
 Regaliator.configure do |config|
   # Version target
-  config.version      = '3.0'
+  config.version      = '3.1'
 
   # Authentication settings
   config.api_key      = 'your-api-key'
@@ -58,6 +59,8 @@ Regaliator.configure do |config|
   # ...
 end
 ```
+
+The available versions are: `1.5`, `3.0` and `3.1` (recommended).
 
 ## Requests
 
