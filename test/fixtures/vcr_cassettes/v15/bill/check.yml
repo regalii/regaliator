@@ -1,0 +1,52 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://api.regalii.dev/bill/check
+    body:
+      encoding: UTF-8
+      string: '{"biller_id":9,"account_number":"6463060086","amount":50}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/vnd.regalii.v1.5+json
+      User-Agent:
+      - Regaliator gem v4.0.0.pre
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 14 Jan 2017 03:12:45 GMT
+      Content-Md5:
+      - DQS+V5xSdhLMVsq19z0h2w==
+      Authorization:
+      - APIAuth testing:KqioHnXtAn/A+whqjCpnr8C1HE8=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"25dd6b94bb6b94248cb7a0ed9f058d38"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - bf218af2-3183-4e06-afa5-083fbea6c3ee
+      X-Runtime:
+      - '10.664565'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"topup_amount_received":1800.0,"bonus_amount_received":0.0,"total_amount_received":1800.0,"topup_fx_rate":40.0,"biller_promotions":[],"phone_number_biller_id":null,"biller_currency_iso":"DOP"}'
+    http_version: 
+  recorded_at: Sat, 14 Jan 2017 03:12:56 GMT
+recorded_with: VCR 2.9.3

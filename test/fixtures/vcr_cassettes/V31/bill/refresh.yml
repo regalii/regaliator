@@ -1,0 +1,52 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://api.regalii.dev/bills/695109/refresh
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/vnd.regalii.v3.1+json
+      User-Agent:
+      - Regaliator gem v4.0.0
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 20 Jan 2017 18:25:36 GMT
+      Content-Md5:
+      - mZFLkyvTelC5g8XnyQrpOw==
+      Authorization:
+      - APIAuth testing:DlcT45MtZaNbbFJeAZeqeJGMFiw=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"f7fe2ff230a086fa50a28d635b7679e0"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 1bd661e6-b190-47a5-86ec-7cc93b75187c
+      X-Runtime:
+      - '1.056758'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"type":"bill","id":695109,"biller_id":2,"account_number":"8081969","name_on_account":null,"due_date":null,"balance":482.0,"balance_currency":"RD","balance_updated_at":"2017-01-20T18:25:36Z","error_code":null,"error_message":null,"status":"linked","migrated_at":null,"mfa_challenges":[]}'
+    http_version: 
+  recorded_at: Fri, 20 Jan 2017 18:25:37 GMT
+recorded_with: VCR 2.9.3

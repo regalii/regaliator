@@ -1,16 +1,24 @@
+require 'base64'
+require 'digest'
+require 'net/http'
+require 'openssl'
+require 'uri'
+require 'regaliator/response'
+require 'regaliator/version'
+
 module Regaliator
   class Request
-    CONTENT_TYPE = 'application/json'
+    CONTENT_TYPE = 'application/json'.freeze
 
     attr_reader :config, :http, :http_request, :uri, :endpoint, :params, :timestamp
 
-    def initialize(endpoint, params = {})
-      @config         = Regaliator.configuration
-      @timestamp      = Time.now.utc.httpdate.to_s
-      @endpoint       = endpoint
-      @params         = params
-      @uri            = build_uri
-      @http           = build_http
+    def initialize(config, endpoint, params = {})
+      @config    = config
+      @timestamp = Time.now.utc.httpdate.to_s
+      @endpoint  = endpoint
+      @params    = params
+      @uri       = build_uri
+      @http      = build_http
     end
 
     def post
@@ -46,8 +54,7 @@ module Regaliator
     def build_uri
       protocol = config.secure? ? 'https' : 'http'
       url = ["#{protocol}://#{config.host}", endpoint].join
-      uri = URI.parse(url)
-      uri
+      URI.parse(url)
     end
 
     def build_http
@@ -72,9 +79,7 @@ module Regaliator
         'Date'          => timestamp,
         'Content-MD5'   => content_md5,
         'Authorization' => authorization
-      }.each do |k,v|
-        http_request[k] = v
-      end
+      }.each { |k,v| http_request[k] = v }
     end
 
     def authorization
