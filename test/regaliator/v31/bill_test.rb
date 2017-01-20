@@ -6,8 +6,8 @@ module Regaliator
       def setup
         @config = Configuration.new.tap do |config|
           config.version    = API_VERSION
-          config.api_key    = 'api-key'
-          config.secret_key = 'secret-key'
+          config.api_key    = 'testing'
+          config.secret_key = 'testing'
           config.host       = 'api.regalii.dev'
           config.use_ssl    = false
         end
@@ -24,7 +24,7 @@ module Regaliator
 
       def test_update
         VCR.use_cassette('V31/bill/update') do |cassette|
-          response = Regaliator.new(@config).bill.update(5, name_on_account: 'Test name')
+          response = Regaliator.new(@config).bill.update(695109, name_on_account: 'Test name')
 
           assert response.success?
           assert_equal extract_hsh(cassette), response.data
@@ -33,7 +33,7 @@ module Regaliator
 
       def test_show
         VCR.use_cassette('V31/bill/show') do |cassette|
-          response = Regaliator.new(@config).bill.show(5)
+          response = Regaliator.new(@config).bill.show(695109)
 
           assert response.success?
           assert_equal extract_hsh(cassette), response.data
@@ -42,7 +42,7 @@ module Regaliator
 
       def test_xdata
         VCR.use_cassette('V31/bill/xdata') do |cassette|
-          response = Regaliator.new(@config).bill.xdata(674101)
+          response = Regaliator.new(@config).bill.xdata(695109)
 
           assert response.success?
           assert_equal extract_hsh(cassette), response.data
@@ -51,7 +51,7 @@ module Regaliator
 
       def test_refresh
         VCR.use_cassette('V31/bill/refresh') do |cassette|
-          response = Regaliator.new(@config).bill.refresh(5)
+          response = Regaliator.new(@config).bill.refresh(695109)
 
           assert response.success?
           assert_equal extract_hsh(cassette), response.data
@@ -60,7 +60,11 @@ module Regaliator
 
       def test_pay
         VCR.use_cassette('V31/bill/pay') do |cassette|
-          response = Regaliator.new(@config).bill.pay(5, amount: 758.0, currency: 'RD')
+          response = Regaliator.new(@config).bill.pay(695109,
+            amount: 758.0,
+            currency: 'RD',
+            user_id: 12981
+          )
 
           assert response.success?
           assert_equal extract_hsh(cassette), response.data
@@ -72,7 +76,7 @@ module Regaliator
           response = Regaliator.new(@config).bill.list
 
           assert response.success?
-          assert_equal response.data['bills'].size, 1
+          assert_equal 100, response.data['bills'].size
         end
       end
     end

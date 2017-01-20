@@ -6,8 +6,8 @@ module Regaliator
       def setup
         @config = Configuration.new.tap do |config|
           config.version    = API_VERSION
-          config.api_key    = 'api-key'
-          config.secret_key = 'secret-key'
+          config.api_key    = 'testing'
+          config.secret_key = 'testing'
           config.host       = 'api.regalii.dev'
           config.use_ssl    = false
         end
