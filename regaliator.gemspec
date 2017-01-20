@@ -20,7 +20,7 @@ Gem::Specification.new do |spec|
 
   spec.required_ruby_version = ['>= 2.1.0', '<= 2.4']
 
-  spec.add_dependency 'json', '~> 2.0', '>= 2.0.3'
+  spec.add_dependency 'json'
 
   spec.add_development_dependency 'bundler',            '~> 1.7'
   # Old version of Guard to support Ruby 2.1.5.
