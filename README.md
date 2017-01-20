@@ -67,7 +67,7 @@ The available versions are: `1.5`, `3.0` and `3.1` (recommended).
 **Success:**
 
 ```ruby
-> response = Regaliator.new.bill.show(1)
+> response = Regaliator.bill.show(1)
 > response.success?
 => true
 > response.data
@@ -75,7 +75,7 @@ The available versions are: `1.5`, `3.0` and `3.1` (recommended).
 ```
 
 ```ruby
-> response = Regaliator.new.bill.pay(1, amount: 13.0, currency: 'MXN')
+> response = Regaliator.bill.pay(1, amount: 13.0, currency: 'MXN')
 > response.success?
 => true
 > response.data
@@ -85,7 +85,7 @@ The available versions are: `1.5`, `3.0` and `3.1` (recommended).
 **Failure:**
 
 ```ruby
-> response = Regaliator.new.bill.pay(biller_id: 1, account_number: '12345', amount: 0.0, currency: 'MXN')
+> response = Regaliator.bill.pay(biller_id: 1, account_number: '12345', amount: 0.0, currency: 'MXN')
 > response.success?
 => false
 > response.data
@@ -99,7 +99,7 @@ The following examples will show how to use the Regaliator gem to connect to the
 ### Billers List
 https://www.regalii.com/billers
 ```ruby
-response = Regaliator.new.biller.utilities
+response = Regaliator.biller.utilities
 ```
 
 ## Tests
