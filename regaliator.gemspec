@@ -20,12 +20,9 @@ Gem::Specification.new do |spec|
 
   spec.required_ruby_version = ['>= 2.1.0', '<= 2.4']
 
-  spec.add_dependency 'json', '~> 2.0', '>= 2.0.3'
+  spec.add_dependency 'json'
 
   spec.add_development_dependency 'bundler',            '~> 1.7'
-  # Old version of Guard to support Ruby 2.1.5.
-  spec.add_development_dependency 'guard',              '~> 2.11', '>= 2.11.0'
-  spec.add_development_dependency 'guard-minitest',     '~> 2.4', '>= 2.4.6'
   spec.add_development_dependency 'minitest-reporters', '~> 1.1', '>= 1.1.13'
   spec.add_development_dependency 'minitest',           '~> 5.8', '>= 5.8.4'
   spec.add_development_dependency 'rake',               '~> 10.0'
