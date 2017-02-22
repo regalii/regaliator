@@ -30,6 +30,10 @@ module Regaliator
       def list(params = {})
         request('/bills', params).get
       end
+
+      def delete(id)
+        request("/bills/#{id}").delete
+      end
     end
   end
 end
