@@ -79,6 +79,16 @@ module Regaliator
           assert_equal 100, response.data['bills'].size
         end
       end
+
+      def test_delete
+        VCR.use_cassette('V31/bill/delete') do |cassette|
+          response = Regaliator.new(@config).bill.delete(695111)
+
+          assert response.success?
+          assert_equal extract_hsh(cassette), response.data
+        end
+      end
+
     end
   end
 end
