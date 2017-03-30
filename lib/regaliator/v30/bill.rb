@@ -15,8 +15,16 @@ module Regaliator
         request("/bills/#{id}", params).patch
       end
 
+      def delete(id)
+        request("/bills/#{id}").delete
+      end
+
       def refresh(id)
         request("/bills/#{id}/refresh").post
+      end
+
+      def bulk_refresh(params = {})
+        request("/bills/bulk_refresh", params).post
       end
 
       def pay(id, params = {})

@@ -42,6 +42,13 @@ module Regaliator
       send_request
     end
 
+    def delete
+      @http_request = Net::HTTP::Delete.new(uri.request_uri)
+      @http_request.body = params.to_json
+
+      send_request
+    end
+
     def send_request
       apply_headers
 

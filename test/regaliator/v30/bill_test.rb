@@ -40,6 +40,15 @@ module Regaliator
         end
       end
 
+      def test_delete
+        VCR.use_cassette('v30/bill/delete') do |cassette|
+          response = Regaliator.new(@config).bill.delete(731285)
+
+          assert response.success?
+          assert_equal extract_hsh(cassette), response.data
+        end
+      end
+
       def test_xdata
         VCR.use_cassette('v30/bill/xdata') do |cassette|
           response = Regaliator.new(@config).bill.xdata(674101)
@@ -52,6 +61,15 @@ module Regaliator
       def test_refresh
         VCR.use_cassette('v30/bill/refresh') do |cassette|
           response = Regaliator.new(@config).bill.refresh(5)
+
+          assert response.success?
+          assert_equal extract_hsh(cassette), response.data
+        end
+      end
+
+      def test_bulk_refresh
+        VCR.use_cassette('v30/bill/bulk_refresh') do |cassette|
+          response = Regaliator.new(@config).bill.bulk_refresh(bill_ids: [720845, 725006, 731285])
 
           assert response.success?
           assert_equal extract_hsh(cassette), response.data
