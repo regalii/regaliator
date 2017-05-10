@@ -29,8 +29,8 @@ module Regaliator
     end
 
     def get
-      uri.query = URI.encode_www_form(params) if !params.empty?
       @http_request = Net::HTTP::Get.new(uri.request_uri)
+      @http_request.body = params.to_json if !params.empty?
 
       send_request
     end
