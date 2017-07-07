@@ -3,12 +3,14 @@ require 'regaliator/api_version_error'
 require 'regaliator/v15'
 require 'regaliator/v30'
 require 'regaliator/v31'
+require 'regaliator/v32'
 
 module Regaliator
   API_VERSIONS = {
     V15::API_VERSION => V15::Client,
     V30::API_VERSION => V30::Client,
-    V31::API_VERSION => V31::Client
+    V31::API_VERSION => V31::Client,
+    V32::API_VERSION => V32::Client
   }.freeze
 
   class << self
