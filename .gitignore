@@ -15,3 +15,4 @@
 mkmf.log
 *.gem
 .idea/*
+.DS_Store
