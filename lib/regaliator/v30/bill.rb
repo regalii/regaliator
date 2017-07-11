@@ -23,6 +23,10 @@ module Regaliator
         request("/bills/#{id}/refresh").post
       end
 
+      def migrate(id, params = {})
+        request("/bills/#{id}/migrate", params).post
+      end
+
       def bulk_refresh(params = {})
         request("/bills/bulk_refresh", params).post
       end

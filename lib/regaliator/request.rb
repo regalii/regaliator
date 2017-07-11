@@ -38,7 +38,6 @@ module Regaliator
     def patch
       @http_request = Net::HTTP::Patch.new(uri.request_uri)
       @http_request.body = params.to_json
-
       send_request
     end
 

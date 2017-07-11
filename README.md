@@ -1,7 +1,8 @@
 # Regaliator
 
 Ruby wrapper for Regalii's API. The full API docs:
-  * Version 3.1 (recommended): https://www.regalii.com/api/v3/overview ;
+  * Version 3.2 (recommended): https://www.regalii.com/api/v3/overview ;
+  * Version 3.1 : https://www.regalii.com/api/v3/overview ;
   * Version 3.0 : https://www.regalii.com/api/v3/overview ;
   * Version 1.5 : https://www.regalii.com/api/v1/overview
 
@@ -60,7 +61,7 @@ Regaliator.configure do |config|
 end
 ```
 
-The available versions are: `1.5`, `3.0` and `3.1` (recommended).
+The available versions are: `1.5`, `3.0`, `3.1` and `3.2`(recommended).
 
 ## Requests
 
