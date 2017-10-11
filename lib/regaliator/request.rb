@@ -72,7 +72,6 @@ module Regaliator
       http.read_timeout = config.read_timeout
       http.open_timeout = config.open_timeout
       http.use_ssl      = config.secure?
-      http.ssl_version  = :TLSv1
 
       http
     end
