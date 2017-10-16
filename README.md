@@ -1,10 +1,10 @@
 # Regaliator
 
 Ruby wrapper for Regalii's API. The full API docs:
-  * Version 3.2 (recommended): https://www.regalii.com/api/v3/overview ;
-  * Version 3.1 : https://www.regalii.com/api/v3/overview ;
-  * Version 3.0 : https://www.regalii.com/api/v3/overview ;
-  * Version 1.5 : https://www.regalii.com/api/v1/overview
+  * Version 3.2 (recommended): https://www.regalii.com/api/v3;
+  * Version 3.1 : https://www.regalii.com/api/v3;
+  * Version 3.0 : https://www.regalii.com/api/v3;
+  * Version 1.5 : https://www.regalii.com/api/v1
 
 ## Installation
 
