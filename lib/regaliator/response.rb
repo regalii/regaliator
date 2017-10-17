@@ -13,7 +13,7 @@ module Regaliator
 
     def data
       @data ||= begin
-        JSON::parse(http_response.body).tap do |hsh|
+        JSON.parse(http_response.body).tap do |hsh|
           hsh.merge!('pagination' => pagination) if paginated?
         end
       rescue
@@ -22,7 +22,7 @@ module Regaliator
     end
 
     def success?
-      @success ||= http_response.kind_of?(Net::HTTPSuccess)
+      @success ||= http_response.is_a?(Net::HTTPSuccess)
     end
 
     def fail?
@@ -34,7 +34,7 @@ module Regaliator
     end
 
     def pagination
-      @pagination ||= JSON::parse(http_response[PAGINATION_HEADER])
+      @pagination ||= JSON.parse(http_response[PAGINATION_HEADER])
     end
   end
 end

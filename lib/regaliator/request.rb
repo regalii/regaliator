@@ -10,8 +10,10 @@ require 'time'
 module Regaliator
   class Request
     CONTENT_TYPE = 'application/json'.freeze
+    API_VERSION = '1.5'.freeze
 
-    attr_reader :config, :http, :http_request, :uri, :endpoint, :params, :timestamp
+    attr_reader :config, :http, :http_request, :uri, :endpoint, :params,
+                :timestamp
 
     def initialize(config, endpoint, params = {})
       @config    = config
@@ -24,26 +26,6 @@ module Regaliator
 
     def post
       @http_request = Net::HTTP::Post.new(uri.request_uri)
-      @http_request.body = params.to_json
-
-      send_request
-    end
-
-    def get
-      uri.query = URI.encode_www_form(params) if !params.empty?
-      @http_request = Net::HTTP::Get.new(uri.request_uri)
-
-      send_request
-    end
-
-    def patch
-      @http_request = Net::HTTP::Patch.new(uri.request_uri)
-      @http_request.body = params.to_json
-      send_request
-    end
-
-    def delete
-      @http_request = Net::HTTP::Delete.new(uri.request_uri)
       @http_request.body = params.to_json
 
       send_request
@@ -80,17 +62,19 @@ module Regaliator
     def apply_headers
       {
         'User-Agent'    => "Regaliator gem v#{Regaliator::VERSION}",
-        'Accept'        => "application/vnd.regalii.v#{config.version}+json",
+        'Accept'        => "application/vnd.regalii.v#{API_VERSION}+json",
         'Content-Type'  => CONTENT_TYPE,
         'Date'          => timestamp,
         'Content-MD5'   => content_md5,
         'Authorization' => authorization
-      }.each { |k,v| http_request[k] = v }
+      }.each { |k, v| http_request[k] = v }
     end
 
     def authorization
       digest = OpenSSL::Digest.new('sha1')
-      auth = Base64.strict_encode64(OpenSSL::HMAC.digest(digest, config.secret_key, canonical_string))
+      auth = Base64.strict_encode64(
+        OpenSSL::HMAC.digest(digest, config.secret_key, canonical_string)
+      )
 
       "APIAuth #{config.api_key}:#{auth}"
     end
