@@ -18,10 +18,6 @@ module Regaliator
       assert_nil @subject.host
     end
 
-    def test_version_attribute_has_default_value
-      assert_nil @subject.version
-    end
-
     def test_open_timeout_attribute_has_default_value
       assert_instance_of Fixnum, @subject.open_timeout
     end
@@ -63,11 +59,6 @@ module Regaliator
     def test_host_attribute_has_writter
       subject = Configuration.new.tap { |c| c.host = 'api.example.com' }
       assert_equal 'api.example.com', subject.host
-    end
-
-    def test_version_attribute_has_writter
-      subject = Configuration.new.tap { |c| c.version = '1.0' }
-      assert_equal '1.0', subject.version
     end
 
     def test_open_timeout_attribute_has_writter

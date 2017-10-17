@@ -1,4 +1,4 @@
-# coding: utf-8
+
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'regaliator/version'
@@ -6,9 +6,11 @@ require 'regaliator/version'
 Gem::Specification.new do |spec|
   spec.name          = 'regaliator'
   spec.version       = Regaliator::VERSION
-  spec.authors       = ['Hesham El-Nahhas', 'Leigh Halliday', 'Geoffrey Roguelon', ]
-  spec.email         = ['hesham@regalii.com', 'leigh@regalii.com', 'geoffrey@regalii.com']
-  spec.summary       = %q{Ruby wrapper for Regalii's API}
+  spec.authors       = ['Hesham El-Nahhas', 'Leigh Halliday',
+                        'Geoffrey Roguelon', 'Romario Lopez']
+  spec.email         = ['hesham@regalii.com', 'leigh@regalii.com',
+                        'geoffrey@regalii.com', 'romario@regalii.com']
+  spec.summary       = "Ruby wrapper for Regalii's API"
   spec.description   = "A Ruby client for consuming Regalii's APIs."
   spec.homepage      = 'https://www.regalii.com/api'
   spec.license       = 'MIT'
