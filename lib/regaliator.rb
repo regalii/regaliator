@@ -1,18 +1,7 @@
 require 'regaliator/configuration'
-require 'regaliator/api_version_error'
-require 'regaliator/v15'
-require 'regaliator/v30'
-require 'regaliator/v31'
-require 'regaliator/v32'
+require 'regaliator/client'
 
 module Regaliator
-  API_VERSIONS = {
-    V15::API_VERSION => V15::Client,
-    V30::API_VERSION => V30::Client,
-    V31::API_VERSION => V31::Client,
-    V32::API_VERSION => V32::Client
-  }.freeze
-
   class << self
     def configuration
       @config ||= Configuration.new
@@ -26,11 +15,7 @@ module Regaliator
       config = get_configuration(arg)
       yield(config) if block_given?
 
-      unless API_VERSIONS.key?(config.version)
-        raise APIVersionError.new(config.version)
-      end
-
-      API_VERSIONS[config.version].new(config)
+      Client.new(config)
     end
 
     def method_missing(method_name, *args)
