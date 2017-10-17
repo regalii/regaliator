@@ -19,11 +19,11 @@ module Regaliator
     end
 
     def test_open_timeout_attribute_has_default_value
-      assert_instance_of Integer, @subject.open_timeout
+      assert_instance_of Fixnum, @subject.open_timeout
     end
 
     def test_read_timeout_attribute_has_default_value
-      assert_instance_of Integer, @subject.read_timeout
+      assert_instance_of Fixnum, @subject.read_timeout
     end
 
     def test_use_ssl_attribute_has_default_value
