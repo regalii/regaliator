@@ -1,0 +1,58 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://api.regalii.dev/bill/consult
+    body:
+      encoding: UTF-8
+      string: '{"biller_id":14,"account_number":"6463060086","user_id":12981}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/vnd.regalii.v1.6+json
+      User-Agent:
+      - Regaliator gem v4.2.0
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 01 Aug 2017 20:07:54 GMT
+      Content-Md5:
+      - JylbCvYqcNlpKVS5ellg3A==
+      Authorization:
+      - APIAuth testing:NLYFKSXqOiJpRiAgilIiP3pHwZ8=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-store, must-revalidate, private, max-age=0
+      Content-Type:
+      - application/json; charset=utf-8
+      Server:
+      - thin 1.5.1 codename Straight Razor
+      Set-Cookie:
+      - __profilin=p%3Dt; path=/
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Miniprofiler-Ids:
+      - '["6ejb8nwplj473si59e1c","t0azwm8co5tcpswi3lqt","5jk98du3pxcinwjuyyqj","f6ie1t3880amk296nfwc","x1qlxjnutp0728apmxj6","jkfak7i0nzmjdnarmo41","par6uhs6oernbjlzomwk","8xscqsrev8aocsgmzyk9","ig0e1e38gmfvti5mz9t8","l130ii42kwrbytazzoiq","5zmprn500dlfwvfvcnce","4s2qv2z3bs3onhxjttto","ncvfjrroe7f5q0a9zdir","zbb7cd01oqbect094lj2","y8h7wxjgyjn5y8lldy45","oyojf2wwrtzgs2oq6kui","jtp7rxty49srbnvs81vi","aeexy9e3en4wn9c0tjgk","wqv1l87qutpz3z26rm9l","xtnrl1vlsnr0ok239vi4"]'
+      X-Request-Id:
+      - 033a06f3-bed0-49c3-9a7e-71d191586548
+      X-Runtime:
+      - '0.064458'
+      X-Xss-Protection:
+      - 1; mode=block
+      Date:
+      - Tue, 01 Aug 2017 20:07:54 GMT
+      Content-Length:
+      - '341'
+    body:
+      encoding: UTF-8
+      string: '{"account_number":"6463060086","biller_id":14,"bill_amount":150.0,"bill_amount_currency":"RD","fx_rate":46.5892,"bill_amount_usd":3.22,"bill_amount_chain_currency":3.22,"payment_transaction_fee":3.0,"payment_total_usd":6.22,"payment_total_chain_currency":6.22,"invoice_number":null,"invoice_date":null,"name_on_account":null,"due_date":null}'
+    http_version: 
+  recorded_at: Tue, 01 Aug 2017 20:07:54 GMT
+recorded_with: VCR 3.0.3

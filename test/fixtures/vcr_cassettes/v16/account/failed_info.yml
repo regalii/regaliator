@@ -1,0 +1,56 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://api.regalii.dev/account
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/vnd.regalii.v1.6+json
+      User-Agent:
+      - Regaliator gem v4.2.0
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 01 Aug 2017 20:07:58 GMT
+      Content-Md5:
+      - mZFLkyvTelC5g8XnyQrpOw==
+      Authorization:
+      - APIAuth testing:gQ4Ly1T1XeEEvyBzqOQ60DK0/Fs=
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Cache-Control:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Server:
+      - thin 1.5.1 codename Straight Razor
+      Set-Cookie:
+      - __profilin=p%3Dt; path=/
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - c6a444f4-ddc9-4368-8643-c8c5283d2634
+      X-Runtime:
+      - '0.021302'
+      X-Xss-Protection:
+      - 1; mode=block
+      Date:
+      - Tue, 01 Aug 2017 20:07:58 GMT
+      Content-Length:
+      - '26'
+    body:
+      encoding: UTF-8
+      string: '{"message":"Unauthorized"}'
+    http_version: 
+  recorded_at: Tue, 01 Aug 2017 20:07:58 GMT
+recorded_with: VCR 3.0.3

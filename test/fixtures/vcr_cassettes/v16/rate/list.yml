@@ -1,0 +1,58 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://api.regalii.dev/rates
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/vnd.regalii.v1.6+json
+      User-Agent:
+      - Regaliator gem v4.2.0
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 01 Aug 2017 20:07:57 GMT
+      Content-Md5:
+      - mZFLkyvTelC5g8XnyQrpOw==
+      Authorization:
+      - APIAuth testing:9Q4yv87qytdz2IF5tctf8ocx6W0=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-store, must-revalidate, private, max-age=0
+      Content-Type:
+      - application/json; charset=utf-8
+      Server:
+      - thin 1.5.1 codename Straight Razor
+      Set-Cookie:
+      - __profilin=p%3Dt; path=/
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Miniprofiler-Ids:
+      - '["r6lmkflfhgzk81pl7mbf","yzn45ee23n7io98v2qj2","7xow4niq6l4oflkx1j91","hi0oyl4yj3yid5dshdia","6ejb8nwplj473si59e1c","t0azwm8co5tcpswi3lqt","5jk98du3pxcinwjuyyqj","f6ie1t3880amk296nfwc","x1qlxjnutp0728apmxj6","jkfak7i0nzmjdnarmo41","par6uhs6oernbjlzomwk","8xscqsrev8aocsgmzyk9","ig0e1e38gmfvti5mz9t8","l130ii42kwrbytazzoiq","5zmprn500dlfwvfvcnce","4s2qv2z3bs3onhxjttto","ncvfjrroe7f5q0a9zdir","zbb7cd01oqbect094lj2","y8h7wxjgyjn5y8lldy45","oyojf2wwrtzgs2oq6kui"]'
+      X-Request-Id:
+      - 8babe246-9cc1-4278-b949-9e46cfc393ee
+      X-Runtime:
+      - '0.131638'
+      X-Xss-Protection:
+      - 1; mode=block
+      Date:
+      - Tue, 01 Aug 2017 20:07:58 GMT
+      Content-Length:
+      - '206'
+    body:
+      encoding: UTF-8
+      string: '{"GBP":0.7534,"CAD":1.2284,"MXN":17.2688,"RD":46.5892,"NIO":29.4784,"GTQ":7.1502,"HNL":22.9949,"COP":2953.5534,"BRL":3.0764,"PEN":3.1806,"BOB":6.8362,"PHP":49.7022,"INR":63.1978,"JMD":125.244,"NGN":308.945}'
+    http_version: 
+  recorded_at: Tue, 01 Aug 2017 20:07:58 GMT
+recorded_with: VCR 3.0.3
