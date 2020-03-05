@@ -5,6 +5,7 @@ require 'openssl'
 require 'uri'
 require 'regaliator/response'
 require 'regaliator/version'
+require 'time'
 
 module Regaliator
   class Request
@@ -14,7 +15,7 @@ module Regaliator
 
     def initialize(config, endpoint, params = {})
       @config    = config
-      @timestamp = Time.now.utc.httpdate.to_s
+      @timestamp = Time.now.utc.httpdate
       @endpoint  = endpoint
       @params    = params
       @uri       = build_uri
@@ -72,7 +73,6 @@ module Regaliator
       http.read_timeout = config.read_timeout
       http.open_timeout = config.open_timeout
       http.use_ssl      = config.secure?
-      http.ssl_version  = :TLSv1
 
       http
     end
