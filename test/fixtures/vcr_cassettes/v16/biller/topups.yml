@@ -1,0 +1,203 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://api.regalii.dev/billers/topups
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/vnd.regalii.v1.6+json
+      User-Agent:
+      - Regaliator gem v4.2.0
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 01 Aug 2017 20:07:50 GMT
+      Content-Md5:
+      - mZFLkyvTelC5g8XnyQrpOw==
+      Authorization:
+      - APIAuth testing:UUGt9YpBiedZtlNYDJeEavd983w=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-store, must-revalidate, private, max-age=0
+      Content-Type:
+      - application/json; charset=utf-8
+      Server:
+      - thin 1.5.1 codename Straight Razor
+      Set-Cookie:
+      - __profilin=p%3Dt; path=/
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Miniprofiler-Ids:
+      - '["ozhmwpacbverlbst6qwj","5jk98du3pxcinwjuyyqj","f6ie1t3880amk296nfwc","x1qlxjnutp0728apmxj6","jkfak7i0nzmjdnarmo41","par6uhs6oernbjlzomwk","8xscqsrev8aocsgmzyk9","ig0e1e38gmfvti5mz9t8","l130ii42kwrbytazzoiq","5zmprn500dlfwvfvcnce","4s2qv2z3bs3onhxjttto","ncvfjrroe7f5q0a9zdir","zbb7cd01oqbect094lj2","y8h7wxjgyjn5y8lldy45","oyojf2wwrtzgs2oq6kui","jtp7rxty49srbnvs81vi","aeexy9e3en4wn9c0tjgk","wqv1l87qutpz3z26rm9l","xtnrl1vlsnr0ok239vi4"]'
+      X-Pagination:
+      - '{"total_entries":131,"total_pages":1,"previous_page":null,"current_page":1,"next_page":null}'
+      X-Request-Id:
+      - e3996df1-3a00-47c0-a586-5cd71d672aee
+      X-Runtime:
+      - '0.458328'
+      X-Xss-Protection:
+      - 1; mode=block
+      Date:
+      - Tue, 01 Aug 2017 20:07:50 GMT
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"billers":[{"id":4222,"name":"Aircel India","country":"IN","currency":"INR","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":["4.00","6.00","10.00","20.00"],"topup_fxrate":null,"mask":null,"topup_commission":9.0,"account_number_digits":"10"},{"id":4132,"name":"Airtel
+        Bharti India","country":"IN","currency":"INR","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":["4.00","6.00","10.00","20.00"],"topup_fxrate":null,"mask":null,"topup_commission":9.0,"account_number_digits":"10"},{"id":4142,"name":"Airtel
+        Nigeria","country":"NG","currency":"NGN","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"1..75","topup_fxrate":185.0,"mask":null,"topup_commission":9.0,"account_number_digits":"10"},{"id":4842,"name":"Alegro
+        Ecuador","country":"EC","currency":"USD","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":["6.00","12.00"],"topup_fxrate":0.8333,"mask":null,"topup_commission":11.0,"account_number_digits":"8"},{"id":5712,"name":"AT\u0026T
+        RTR","country":"US","currency":"USD","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"10..10","topup_fxrate":1.0,"mask":null,"topup_commission":18.75,"account_number_digits":"10"},{"id":6892,"name":"AT\u0026T
+        Variable","country":"US","currency":"USD","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"15..100","topup_fxrate":1.0,"mask":"(999)
+        999-9999","topup_commission":14.25,"account_number_digits":"10"},{"id":4312,"name":"Bmobile
+        Trinidad \u0026 Tobago ","country":"TT","currency":"TTD","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"5..75","topup_fxrate":6.0,"mask":null,"topup_commission":11.0,"account_number_digits":"7"},{"id":4212,"name":"BSNL
+        India","country":"IN","currency":"INR","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":["1.25","2.50","5.00","7.00","12.00","22.00"],"topup_fxrate":null,"mask":null,"topup_commission":9.0,"account_number_digits":"10"},{"id":11,"name":"Claro","country":"DO","currency":"DOP","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"6..99","topup_fxrate":43.41,"mask":"(999)
+        999-9999","topup_commission":9.0,"account_number_digits":"10"},{"id":1601,"name":"Claro","country":"GT","currency":"GTQ","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"3..75","topup_fxrate":7.78,"mask":"9999-9999","topup_commission":7.0,"account_number_digits":"8"},{"id":1631,"name":"Claro","country":"SV","currency":"USD","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"3..75","topup_fxrate":1.0,"mask":"9999-9999","topup_commission":7.0,"account_number_digits":"8"},{"id":1671,"name":"Claro","country":"HN","currency":"HNL","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"4..75","topup_fxrate":22.0,"mask":"9999-9999","topup_commission":7.0,"account_number_digits":"8"},{"id":3962,"name":"Claro
+        - Buen monto recibido","country":"SV","currency":"USD","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"2..75","topup_fxrate":1.0,"mask":"9999-9999","topup_commission":10.0,"account_number_digits":"8"},{"id":3972,"name":"Claro
+        - Buen monto recibido","country":"HN","currency":"HNL","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"3..75","topup_fxrate":23.6297,"mask":"9999-9999","topup_commission":10.0,"account_number_digits":"8"},{"id":3982,"name":"Claro
+        - Buen monto recibido","country":"GT","currency":"GTQ","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"2..75","topup_fxrate":7.35,"mask":"9999-9999","topup_commission":10.0,"account_number_digits":"8"},{"id":5062,"name":"Claro
+        Brazil","country":"BR","currency":"BRL","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":["4.30","5.75","8.60","14.30"],"topup_fxrate":3.0233,"mask":null,"topup_commission":6.0,"account_number_digits":"10..11"},{"id":5342,"name":"Claro
+        Colombia","country":"CO","currency":"COP","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"1..50","topup_fxrate":2918.0,"mask":null,"topup_commission":5.0,"account_number_digits":"10"},{"id":3603,"name":"Claro
+        DR","country":"DO","currency":"DOP","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"5..99","topup_fxrate":44.73,"mask":"(999)
+        999-9999","topup_commission":9.0,"account_number_digits":"10"},{"id":4372,"name":"Claro
+        Ecuador","country":"EC","currency":"USD","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":["7.00","11.00","22.00","33.00"],"topup_fxrate":0.8571,"mask":null,"topup_commission":7.0,"account_number_digits":"8"},{"id":3992,"name":"Claro
+        Jamaica","country":"JM","currency":"JMD","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"2..75","topup_fxrate":120.65,"mask":null,"topup_commission":13.0,"account_number_digits":"7"},{"id":4002,"name":"Claro
+        Nicaragua","country":"NI","currency":"USD","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"2..75","topup_fxrate":30.0415,"mask":null,"topup_commission":10.0,"account_number_digits":"8"},{"id":3952,"name":"Claro
+        Peru","country":"PE","currency":"PEN","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"5..33","topup_fxrate":2.9295,"mask":null,"topup_commission":7.0,"account_number_digits":"9"},{"id":4382,"name":"Claro
+        Puerto Rico","country":"PR","currency":"USD","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":["5.00","10.00","20.00","25.00","30.00","35.00","40.00","50.00"],"topup_fxrate":1.0,"mask":null,"topup_commission":7.0,"account_number_digits":"7"},{"id":4682,"name":"Cubacel
+        - II","country":"CU","currency":"CUC","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":["12.00","24.00","36.00","60.00","120.00"],"topup_fxrate":0.8333,"mask":null,"topup_commission":18.0,"account_number_digits":"8"},{"id":1641,"name":"Digicel","country":"SV","currency":"USD","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"6..75","topup_fxrate":1.0,"mask":"9999-9999","topup_commission":7.0,"account_number_digits":"8"},{"id":1681,"name":"Digicel","country":"HN","currency":"HNL","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"2..70","topup_fxrate":18.0,"mask":"9999-9999","topup_commission":7.0,"account_number_digits":"8"},{"id":3692,"name":"Digicel
+        - Buen monto recibido","country":"SV","currency":"USD","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"5..100","topup_fxrate":1.0,"mask":null,"topup_commission":10.0,"account_number_digits":"8"},{"id":3973,"name":"Digicel
+        - Buen monto recibido","country":"HN","currency":"HNL","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"1..70","topup_fxrate":22.06,"mask":"9999-9999","topup_commission":7.0,"account_number_digits":"8"},{"id":4622,"name":"Digicel
+        Antigua","country":"AG","currency":"XCD","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"5..75","topup_fxrate":2.53,"mask":null,"topup_commission":11.0,"account_number_digits":"7"},{"id":4692,"name":"Digicel
+        Aruba","country":"AW","currency":"AWG","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"2..75","topup_fxrate":1.7,"mask":null,"topup_commission":11.0,"account_number_digits":"7"},{"id":4642,"name":"Digicel
+        Barbados","country":"BB","currency":"BBD","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"2..75","topup_fxrate":1.88,"mask":null,"topup_commission":11.0,"account_number_digits":"7"},{"id":4612,"name":"Digicel
+        Grenada","country":"GD","currency":"XCD","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"5..75","topup_fxrate":2.55,"mask":null,"topup_commission":11.0,"account_number_digits":"7"},{"id":3662,"name":"Digicel
+        Guyana","country":"GY","currency":"GYD","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"5..70","topup_fxrate":206.0,"mask":null,"topup_commission":11.0,"account_number_digits":"7"},{"id":3642,"name":"Digicel
+        Haiti","country":"HT","currency":"HTG","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"5..100","topup_fxrate":60.325,"mask":null,"topup_commission":12.0,"account_number_digits":"8"},{"id":3652,"name":"Digicel
+        Jamaica","country":"JM","currency":"JMD","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"5..50","topup_fxrate":120.65,"mask":null,"topup_commission":10.0,"account_number_digits":"7"},{"id":4632,"name":"Digicel
+        St. Kitts","country":"KN","currency":"XCD","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"2..75","topup_fxrate":2.55,"mask":null,"topup_commission":11.0,"account_number_digits":"7"},{"id":4672,"name":"Digicel
+        St. Lucia","country":"LC","currency":"XCD","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"2..75","topup_fxrate":2.54,"mask":null,"topup_commission":11.0,"account_number_digits":"7"},{"id":4662,"name":"Digicel
+        St. Vincent","country":"VC","currency":"XCD","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"5..75","topup_fxrate":2.55,"mask":null,"topup_commission":11.0,"account_number_digits":"7"},{"id":4302,"name":"Digicel
+        Suriname","country":"SR","currency":"SRD","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"2..70","topup_fxrate":3.2,"mask":null,"topup_commission":11.0,"account_number_digits":"7"},{"id":5942,"name":"Digicel
+        T\u0026T Bundle","country":"TT","currency":"TTD","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"20..20","topup_fxrate":6.44,"mask":null,"topup_commission":11.0,"account_number_digits":"7"},{"id":3722,"name":"Digicel
+        Trinadad \u0026 Tobago ","country":"TT","currency":"TTD","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"2..75","topup_fxrate":5.98,"mask":null,"topup_commission":11.0,"account_number_digits":"7"},{"id":4652,"name":"Digicel
+        Turks \u0026 Caicos","country":"TC","currency":"USD","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"2..75","topup_fxrate":1.0,"mask":null,"topup_commission":11.0,"account_number_digits":"7"},{"id":5372,"name":"Digicel
+        Vanuatu","country":"VU","currency":"VUV","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"2..40","topup_fxrate":87.89,"mask":null,"topup_commission":8.0,"account_number_digits":"7"},{"id":4362,"name":"Entel
+        Bolivia","country":"BO","currency":"BOB","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"5..50","topup_fxrate":6.8,"mask":null,"topup_commission":6.0,"account_number_digits":"8"},{"id":4562,"name":"Etisalat
+        Nigeria","country":"NG","currency":"NGN","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":["2.00","5.60","9.80","14.00","19.50","27.00"],"topup_fxrate":null,"mask":null,"topup_commission":4.0,"account_number_digits":"10"},{"id":5232,"name":"Full
+        Movil Costa Rica","country":"CR","currency":"CRC","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"3..18","topup_fxrate":510.0,"mask":null,"topup_commission":7.0,"account_number_digits":"8"},{"id":4432,"name":"Glo
+        Nigeria","country":"NG","currency":"NGN","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"1..65","topup_fxrate":185.0,"mask":null,"topup_commission":15.0,"account_number_digits":"10"},{"id":3672,"name":"Haiti
+        Voila ","country":"HT","currency":"HTG","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"5..75","topup_fxrate":60.325,"mask":null,"topup_commission":12.0,"account_number_digits":"8"},{"id":4092,"name":"Idea
+        India","country":"IN","currency":"INR","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":["4.00","10.00","20.00"],"topup_fxrate":null,"mask":null,"topup_commission":9.0,"account_number_digits":"10"},{"id":5752,"name":"Idirect
+        Dial","country":"US","currency":"USD","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"5..100","topup_fxrate":1.0,"mask":"(999)
+        999-9999","topup_commission":21.0,"account_number_digits":"10"},{"id":3932,"name":"Iusacell
+        - Buen monto recibido","country":"MX","currency":"MXN","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"5..75","topup_fxrate":18.2036,"mask":"(999)
+        999-9999","topup_commission":6.0,"account_number_digits":"10..11"},{"id":1521,"name":"Iusacell
+        - Buena comision agente","country":"MX","currency":"MXN","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":["5.00","10.00","15.00","20.00","30.00","50.00","100.00"],"topup_fxrate":10.0,"mask":"(999)
+        999-9999","topup_commission":25.0,"account_number_digits":"10"},{"id":3802,"name":"Lime
+        Anguilla","country":"AI","currency":"XCD","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"2..75","topup_fxrate":2.55,"mask":null,"topup_commission":14.0,"account_number_digits":"7"},{"id":3812,"name":"Lime
+        Antigua","country":"AG","currency":"XCD","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"2..75","topup_fxrate":2.55,"mask":null,"topup_commission":14.0,"account_number_digits":"7"},{"id":3822,"name":"Lime
+        Barbados","country":"BB","currency":"BBD","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"3..75","topup_fxrate":1.9,"mask":null,"topup_commission":14.0,"account_number_digits":"7"},{"id":3842,"name":"Lime
+        Cayman Islands","country":"KY","currency":"KYD","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"5..75","topup_fxrate":0.8,"mask":null,"topup_commission":14.0,"account_number_digits":"7"},{"id":3852,"name":"Lime
+        Dominica","country":"DM","currency":"XCD","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"2..75","topup_fxrate":2.55,"mask":null,"topup_commission":14.0,"account_number_digits":"7"},{"id":3862,"name":"Lime
+        Grenada","country":"GD","currency":"XCD","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"2..75","topup_fxrate":2.55,"mask":null,"topup_commission":13.0,"account_number_digits":"7"},{"id":3872,"name":"Lime
+        Jamaica","country":"JM","currency":"JMD","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"1..75","topup_fxrate":119.23,"mask":null,"topup_commission":14.0,"account_number_digits":"7"},{"id":3892,"name":"Lime
+        Kitts \u0026 Nevis ","country":"KN","currency":"XCD","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"2..75","topup_fxrate":2.55,"mask":null,"topup_commission":14.0,"account_number_digits":"7"},{"id":3882,"name":"Lime
+        Montserrat","country":"MS","currency":"XCD","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"2..75","topup_fxrate":2.55,"mask":null,"topup_commission":14.0,"account_number_digits":"7"},{"id":3902,"name":"Lime
+        St. Lucia","country":"LC","currency":"XCD","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"2..75","topup_fxrate":2.55,"mask":null,"topup_commission":14.0,"account_number_digits":"7"},{"id":3922,"name":"Lime
+        Turks \u0026 Caicos","country":"TC","currency":"USD","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"5..75","topup_fxrate":1.0,"mask":null,"topup_commission":14.0,"account_number_digits":"7"},{"id":3912,"name":"Lime
+        Vincent \u0026 Grenadines","country":"VC","currency":"XCD","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"2..75","topup_fxrate":2.55,"mask":null,"topup_commission":14.0,"account_number_digits":"7"},{"id":3832,"name":"Lime
+        Virgin Island","country":"VG","currency":"USD","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"5..75","topup_fxrate":1.0,"mask":null,"topup_commission":14.0,"account_number_digits":"7"},{"id":5442,"name":"Lyca
+        International Recharge","country":"US","currency":"USD","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":["10.00","20.00","50.00","100.00"],"topup_fxrate":1.0,"mask":"(999)
+        999-9999","topup_commission":7.5,"account_number_digits":"10"},{"id":4822,"name":"Lyca
+        Unlimited National Plans ","country":"US","currency":"USD","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":["19.00","23.00","29.00","35.00","45.00","55.00"],"topup_fxrate":1.0,"mask":"(999)
+        999-9999","topup_commission":7.5,"account_number_digits":"10"},{"id":5432,"name":"Lycamobile
+        Unlimited International Plans","country":"US","currency":"USD","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":["29.00","39.00","49.00","59.00"],"topup_fxrate":1.0,"mask":"(999)
+        999-9999","topup_commission":7.5,"account_number_digits":"10"},{"id":4772,"name":"Lycamobile
+        US","country":"US","currency":"USD","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"10..100","topup_fxrate":1.0,"mask":"(999)
+        999-9999","topup_commission":7.5,"account_number_digits":"10"},{"id":4782,"name":"Moun
+        DR","country":"DO","currency":"DOP","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"2..75","topup_fxrate":43.0,"mask":null,"topup_commission":10.0,"account_number_digits":"10"},{"id":1611,"name":"Movistar","country":"GT","currency":"GTQ","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"3..50","topup_fxrate":7.14,"mask":"9999-9999","topup_commission":7.0,"account_number_digits":"8"},{"id":1651,"name":"Movistar","country":"SV","currency":"USD","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"3..50","topup_fxrate":1.0,"mask":"9999-9999","topup_commission":7.0,"account_number_digits":"8"},{"id":3732,"name":"Movistar
+        - Buen monto recibido","country":"MX","currency":"MXN","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"2..50","topup_fxrate":18.2036,"mask":"(999)
+        999-9999","topup_commission":6.0,"account_number_digits":"10..11"},{"id":3772,"name":"Movistar
+        - Buen monto recibido","country":"SV","currency":"USD","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"2..50","topup_fxrate":0.97,"mask":null,"topup_commission":6.0,"account_number_digits":"8"},{"id":3782,"name":"Movistar
+        - Buen monto recibido","country":"GT","currency":"GTQ","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"3..50","topup_fxrate":6.7488,"mask":"9999-9999","topup_commission":10.0,"account_number_digits":"8"},{"id":1541,"name":"Movistar
+        - Buena comision agente","country":"MX","currency":"MXN","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":["5.00","10.00","15.00","20.00","30.00","50.00"],"topup_fxrate":10.0,"mask":"(999)
+        999-9999","topup_commission":25.0,"account_number_digits":"10"},{"id":5072,"name":"Movistar
+        Argentina","country":"AR","currency":"ARS","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"2..70","topup_fxrate":15.452,"mask":null,"topup_commission":8.0,"account_number_digits":"10..11"},{"id":3742,"name":"Movistar
+        Colombia","country":"CO","currency":"COP","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"3..50","topup_fxrate":2920.44,"mask":null,"topup_commission":5.0,"account_number_digits":"10"},{"id":3752,"name":"Movistar
+        Ecuador","country":"EC","currency":"USD","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"3..50","topup_fxrate":1.0,"mask":null,"topup_commission":8.0,"account_number_digits":"8"},{"id":3792,"name":"Movistar
+        Nicaragua","country":"NI","currency":"USD","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"3..100","topup_fxrate":29.0,"mask":null,"topup_commission":5.0,"account_number_digits":"8"},{"id":3762,"name":"Movistar
+        Panama","country":"PA","currency":"USD","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"3..50","topup_fxrate":1.0,"mask":null,"topup_commission":8.0,"account_number_digits":"8"},{"id":3942,"name":"Movistar
+        Peru","country":"PE","currency":"PEN","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"5..50","topup_fxrate":3.27,"mask":null,"topup_commission":8.0,"account_number_digits":"9"},{"id":5082,"name":"Movistar
+        Uruguay","country":"UY","currency":"UYU","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"2..70","topup_fxrate":28.0,"mask":null,"topup_commission":8.0,"account_number_digits":"8"},{"id":4552,"name":"MTN
+        Nigeria ","country":"NG","currency":"NGN","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":["2.00","4.50","5.60","7.00","10.00","20.00"],"topup_fxrate":null,"mask":null,"topup_commission":4.0,"account_number_digits":"10"},{"id":4232,"name":"MTS
+        India","country":"IN","currency":"INR","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":["2.00","4.00","6.00","10.00","20.00"],"topup_fxrate":null,"mask":null,"topup_commission":9.0,"account_number_digits":"10"},{"id":4742,"name":"MyPhone2Go
+        ILD","country":"US","currency":"USD","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"1..75","topup_fxrate":1.0,"mask":"(999)
+        999-9999","topup_commission":20.25,"account_number_digits":"10"},{"id":4512,"name":"Natcom
+        Haiti","country":"HT","currency":"HTG","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"1..100","topup_fxrate":60.0,"mask":null,"topup_commission":14.0,"account_number_digits":"8"},{"id":6894,"name":"Net
+        10","country":"US","currency":"USD","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":["25.00","35.00","40.00","50.00","60.00","65.00","75.00"],"topup_fxrate":1.0,"mask":"(999)
+        999-9999","topup_commission":5.25,"account_number_digits":"10"},{"id":5252,"name":"Nextel","country":"MX","currency":"MXN","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":["1.00","5.00","10.00","20.00","50.00"],"topup_fxrate":10.0,"mask":null,"topup_commission":38.5,"account_number_digits":"10..11"},{"id":1511,"name":"Nextel","country":"MX","currency":"MXN","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":["3.00","5.00","10.00","20.00","50.00"],"topup_fxrate":10.0,"mask":"(999)
+        999-9999","topup_commission":25.0,"account_number_digits":"10"},{"id":5052,"name":"OI
+        Brazil","country":"BR","currency":"BRL","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":["5.75","8.60","14.30"],"topup_fxrate":2.4348,"mask":null,"topup_commission":6.0,"account_number_digits":"10..11"},{"id":12,"name":"Orange","country":"DO","currency":"DOP","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":["6.00","11.00","22.00","33.00","55.00"],"topup_fxrate":43.47,"mask":"(999)
+        999-9999","topup_commission":9.0,"account_number_digits":"10"},{"id":4072,"name":"Orange
+        DR","country":"DO","currency":"DOP","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":["5.00","10.00","20.00","30.00","50.00"],"topup_fxrate":44.25,"mask":null,"topup_commission":9.0,"account_number_digits":"10"},{"id":4102,"name":"Reliance
+        India","country":"IN","currency":"INR","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":["4.00","6.00","10.00","20.00"],"topup_fxrate":null,"mask":null,"topup_commission":9.0,"account_number_digits":"10"},{"id":71,"name":"Simple
+        Mobile","country":"US","currency":"USD","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":null,"topup_fxrate":null,"mask":"(999)
+        999-9999","topup_commission":0.0,"account_number_digits":"10"},{"id":4452,"name":"Simple
+        Mobile RTR","country":"US","currency":"USD","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":["20.00","25.00","40.00","50.00","60.00","80.00","100.00"],"topup_fxrate":1.0,"mask":"(999)
+        999-9999","topup_commission":6.75,"account_number_digits":"10"},{"id":3632,"name":"T-Mobile
+        US ","country":"US","currency":"USD","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":["10.00","15.00","25.00","50.00","100.00"],"topup_fxrate":1.0,"mask":null,"topup_commission":2.75,"account_number_digits":"10"},{"id":4262,"name":"T-Mobile
+        US  Open Range","country":"US","currency":"USD","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"10..100","topup_fxrate":1.0,"mask":"(999)
+        999-9999","topup_commission":2.25,"account_number_digits":"10"},{"id":6895,"name":"Talk-Talk
+        Now","country":"US","currency":"USD","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":["1.00","2.00","5.00","10.00","15.00","20.00","50.00"],"topup_fxrate":1.0,"mask":"(999)
+        999-9999","topup_commission":75.0,"account_number_digits":"10"},{"id":4242,"name":"Tata
+        Docomo India ","country":"IN","currency":"INR","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":["10.00","20.00"],"topup_fxrate":null,"mask":null,"topup_commission":9.0,"account_number_digits":"10"},{"id":4112,"name":"Tata
+        Indicom India ","country":"IN","currency":"INR","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":["2.00","10.00","20.00"],"topup_fxrate":null,"mask":null,"topup_commission":9.0,"account_number_digits":"10"},{"id":1581,"name":"Telcel","country":"MX","currency":"MXN","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":["2.00","3.00","5.00","10.00","15.00","20.00","30.00","50.00"],"topup_fxrate":10.0,"mask":"(999)
+        999-9999","topup_commission":25.0,"account_number_digits":"10"},{"id":3622,"name":"Telcel
+        - Buen monto recibido","country":"MX","currency":"MXN","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":["5.00","10.00","15.00","20.00","30.00","50.00"],"topup_fxrate":18.2036,"mask":"(999)
+        999-9999","topup_commission":6.0,"account_number_digits":"10..11"},{"id":1591,"name":"Telcel
+        - Buena comision agente","country":"MX","currency":"MXN","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":["2.00","3.00","5.00","10.00","15.00","20.00","30.00","50.00"],"topup_fxrate":10.0,"mask":"(999)
+        999-9999","topup_commission":25.0,"account_number_digits":"10"},{"id":4462,"name":"Telcel
+        Mexico MXN","country":"MX","currency":"MXN","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":["1.00","2.00","3.00","5.00","10.00","15.00","20.00","30.00","50.00"],"topup_fxrate":10.0,"mask":null,"topup_commission":40.5,"account_number_digits":"10..11"},{"id":4762,"name":"Telesur
+        Suriname","country":"SR","currency":"SRD","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"1..40","topup_fxrate":3.2,"mask":null,"topup_commission":8.0,"account_number_digits":"7"},{"id":6896,"name":"Terracom","country":"US","currency":"USD","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":["5.00","10.00","15.00","20.00","25.00","30.00","50.00","60.00"],"topup_fxrate":1.0,"mask":"(999)
+        999-9999","topup_commission":9.0,"account_number_digits":"10"},{"id":1621,"name":"Tigo","country":"GT","currency":"GTQ","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":["8.00","11.00","16.00","17.00","22.00","28.00","33.00"],"topup_fxrate":7.14,"mask":"9999-9999","topup_commission":7.0,"account_number_digits":"8"},{"id":1661,"name":"Tigo","country":"SV","currency":"USD","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"6..50","topup_fxrate":0.91,"mask":"9999-9999","topup_commission":7.0,"account_number_digits":"8"},{"id":1691,"name":"Tigo","country":"HN","currency":"HNL","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"6..50","topup_fxrate":18.0,"mask":"9999-9999","topup_commission":7.0,"account_number_digits":"8"},{"id":4482,"name":"Tigo
+        - Buen monto recibido","country":"HN","currency":"HNL","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"5..50","topup_fxrate":18.0,"mask":"9999-9999","topup_commission":10.0,"account_number_digits":"8"},{"id":4082,"name":"Tigo
+        - Buen monto recibido","country":"GT","currency":"GTQ","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":["7.00","10.00","14.00","15.00","20.00","25.00","30.00"],"topup_fxrate":7.1429,"mask":"9999-9999","topup_commission":10.0,"account_number_digits":"8"},{"id":4022,"name":"Tigo
+        Colombia","country":"CO","currency":"COP","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":["5.00","10.00"],"topup_fxrate":2520.0,"mask":null,"topup_commission":10.0,"account_number_digits":"10"},{"id":4032,"name":"Tigo
+        El Salvador ","country":"SV","currency":"USD","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":["5.00","6.00","7.00","10.00","12.00","15.00","20.00","30.00","40.00"],"topup_fxrate":0.9,"mask":"9999-9999","topup_commission":17.0,"account_number_digits":"8"},{"id":4012,"name":"Tigo
+        Honduras ","country":"HN","currency":"HNL","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":["5.00","6.00","7.00","9.00","10.00","12.00","15.00","20.00","25.00"],"topup_fxrate":18.0,"mask":"9999-9999","topup_commission":16.0,"account_number_digits":"8"},{"id":5032,"name":"TIM
+        Brazil","country":"BR","currency":"BRL","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":["4.60","5.75","8.60","14.30"],"topup_fxrate":1.9565,"mask":null,"topup_commission":6.0,"account_number_digits":"10..11"},{"id":10,"name":"Tricom","country":"DO","currency":"DOP","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":["3.00","3.50","6.00","6.50","12.50","24.00"],"topup_fxrate":43.75,"mask":"(999)
+        999-9999","topup_commission":9.0,"account_number_digits":"10"},{"id":5982,"name":"Tricom
+        DR","country":"DO","currency":"DOP","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":["2.30","2.75","5.00","5.50","11.40","22.75"],"topup_fxrate":43.4783,"mask":"(999)
+        999-9999","topup_commission":9.0,"account_number_digits":"10"},{"id":1571,"name":"Tuenti","country":"MX","currency":"MXN","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":["8.00","15.00","25.00"],"topup_fxrate":10.0,"mask":"(999)
+        999-9999","topup_commission":25.0,"account_number_digits":"10"},{"id":4702,"name":"Ultra
+        Mobile","country":"US","currency":"USD","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":["19.00","24.00","29.00","34.00","39.00","44.00","49.00","54.00","59.00","64.00","69.00","74.00","79.00","84.00","89.00","99.00"],"topup_fxrate":1.0,"mask":"(999)
+        999-9999","topup_commission":3.75,"account_number_digits":"10"},{"id":4202,"name":"Unefon
+        - Buen monto recibido","country":"MX","currency":"MXN","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"5..75","topup_fxrate":18.2036,"mask":"(999)
+        999-9999","topup_commission":6.0,"account_number_digits":"10..11"},{"id":1531,"name":"Unefon
+        - Buena comision agente","country":"MX","currency":"MXN","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":["5.00","10.00","15.00","20.00","30.00","50.00","100.00"],"topup_fxrate":10.0,"mask":"(999)
+        999-9999","topup_commission":25.0,"account_number_digits":"10"},{"id":5922,"name":"Unefone","country":"MX","currency":"MXN","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":["3.00","5.00","10.00","15.00","20.00","30.00","50.00"],"topup_fxrate":10.0,"mask":null,"topup_commission":35.0,"account_number_digits":"10..11"},{"id":4252,"name":"Uninor
+        India","country":"IN","currency":"INR","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":["4.00","6.00","10.00","20.00"],"topup_fxrate":null,"mask":null,"topup_commission":9.0,"account_number_digits":"10"},{"id":4442,"name":"Verizon
+        Variable US","country":"US","currency":"USD","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"5..150","topup_fxrate":1.0,"mask":"(999)
+        999-9999","topup_commission":8.25,"account_number_digits":"10"},{"id":4862,"name":"Videocon
+        India","country":"IN","currency":"INR","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":["6.00","10.00"],"topup_fxrate":null,"mask":null,"topup_commission":9.0,"account_number_digits":"10"},{"id":1551,"name":"Virgin
+        Mobile","country":"MX","currency":"MXN","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":["2.00","5.00","10.00","15.00","20.00","30.00","50.00"],"topup_fxrate":10.0,"mask":"(999)
+        999-9999","topup_commission":25.0,"account_number_digits":"10"},{"id":9,"name":"Viva","country":"DO","currency":"DOP","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"2..75","topup_fxrate":40.0,"mask":"(999)
+        999-9999","topup_commission":9.0,"account_number_digits":"10"},{"id":3682,"name":"Viva
+        DR ","country":"DO","currency":"DOP","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":"2..75","topup_fxrate":43.0,"mask":null,"topup_commission":14.0,"account_number_digits":"10"},{"id":4122,"name":"Vodafone
+        India","country":"IN","currency":"INR","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":["1.00","2.00","7.00","10.00"],"topup_fxrate":null,"mask":null,"topup_commission":9.0,"account_number_digits":"10"},{"id":6898,"name":"Yourtel","country":"US","currency":"USD","biller_type":"Cell","bill_type":"phone_number","available_topup_amounts":["5.00","10.00","15.00","20.00","25.00","30.00","50.00","60.00"],"topup_fxrate":1.0,"mask":"(999)
+        999-9999","topup_commission":9.0,"account_number_digits":"10"}]}'
+    http_version: 
+  recorded_at: Tue, 01 Aug 2017 20:07:50 GMT
+recorded_with: VCR 3.0.3
